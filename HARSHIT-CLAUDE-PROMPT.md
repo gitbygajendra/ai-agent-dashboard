@@ -8,7 +8,7 @@ I need you to get this project running fully on my Windows laptop, end to end, a
 
 An "AI Agent Dashboard powered by n8n": a Next.js 16 + TypeScript web app (dashboard, CRM, settings) where seven agents (Data Analytics, Email Automation, Finance Audit, CRM Automation, Data-Driven Advisory, Customer Support, Lead Generation) run as ONE n8n workflow (`n8n/agent-dashboard-master.json`, 55 nodes: every stage of every agent is its own node). The app posts a request to n8n's webhook, n8n runs the agent's stages and calls back the app with the result. Everything runs locally: Postgres, the app, n8n. AI text (Groq) is optional; without it agents still work and label results "AI unavailable".
 
-Repo: `https://github.com/gitbygajendra/ai-agent-dashboard` (private; I have access). If `git clone` asks for login, tell me and I'll run `gh auth login` or paste a token myself. Never ask me to paste a token into the chat.
+Repo: `https://github.com/gitbygajendra/ai-agent-dashboard` (public). Clone it with plain `git clone https://github.com/gitbygajendra/ai-agent-dashboard.git`; no GitHub account or login is needed. If Git itself is missing, tell me to install Git for Windows (git-scm.com) and wait.
 
 Read these files first, in order, before running anything: `WINDOWS-SETUP.md`, `README.md`, `n8n/README.md`, `.env.example`, `scripts/setup-windows.ps1`, `scripts/start-n8n.ps1`. They are the source of truth; this prompt is a summary.
 
@@ -36,7 +36,7 @@ Read these files first, in order, before running anything: `WINDOWS-SETUP.md`, `
 
 ## Steps (do them, don't just list them)
 
-1. Clone the repo into `C:\ai-agent-dashboard` (or the folder I say). `cd` into it.
+1. Run `git clone https://github.com/gitbygajendra/ai-agent-dashboard.git C:\ai-agent-dashboard` (or the folder I say). `cd` into it.
 2. Verify Node and PostgreSQL as above. Stop and tell me if either is missing.
 3. Run `powershell -ExecutionPolicy Bypass -File .\scripts\setup-windows.ps1`. It will prompt for the Postgres password: tell me to type it in the terminal; do not ask me to paste it in chat. It creates the `agentdash` database, writes `.env.local`, runs `npm install` and `npm run db:migrate:local`. If `npm install` fails on a native module, read the error and fix it (usually a Node version or network issue). If the script fails on `psql`, find psql manually and run the two psql commands from the script yourself.
 4. Ask me whether I have a Groq API key (free at console.groq.com/keys). If yes: tell me to add the line `GROQ_API_KEY=gsk_...` to `.env.local` myself in a text editor (don't ask me to paste it in chat). If no: continue without AI.
