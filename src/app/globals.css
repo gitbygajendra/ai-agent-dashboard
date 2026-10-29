@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. Light theme, neutral surfaces, one accent (indigo).
+ * Components use these via Tailwind classes (bg-background, text-muted-foreground, ...).
+ */
+:root {
+  --background: #f7f7f8;
+  --foreground: #111114;
+  --card: #ffffff;
+  --card-foreground: #111114;
+  --muted: #f1f1f3;
+  --muted-foreground: #5f6170;
+  --border: #e4e4e9;
+  --input: #dcdce3;
+  --ring: #6366f1;
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+  --primary-soft: #eef0ff;
+  --success: #15803d;
+  --success-soft: #ecfdf3;
+  --warning: #b45309;
+  --warning-soft: #fffbeb;
+  --danger: #c2410c;
+  --danger-strong: #b91c1c;
+  --danger-soft: #fef2f2;
+  --chart-1: #4f46e5;
+  --chart-2: #0ea5e9;
+  --chart-3: #10b981;
+  --chart-4: #f59e0b;
+  --chart-5: #ef4444;
+  --chart-6: #8b5cf6;
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger-strong);
+  --color-danger-soft: var(--danger-soft);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}

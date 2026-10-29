@@ -1,0 +1,752 @@
+order_id,order_date,customer,product,category,region,quantity,unit_price,revenue
+1001,2026-04-01,Customer 042,Dry Fruit Box,Food,Faridabad,8,1299,10392
+1002,2026-04-01,Customer 010,Leather Diary,Stationery,Delhi,5,749,3745
+1003,2026-04-01,Customer 060,Festive Hamper,Hampers,Noida,6,2499,14994
+1004,2026-04-01,Customer 016,Leather Diary,Stationery,Delhi,3,749,2247
+1005,2026-04-02,Customer 028,Tea Sampler,Food,Gurugram,7,549,3843
+1006,2026-04-02,Customer 046,Tea Sampler,Food,Faridabad,1,549,549
+1007,2026-04-02,Customer 021,Scented Candle Trio,Decor,Noida,1,649,649
+1008,2026-04-02,Customer 031,Festive Hamper,Hampers,Faridabad,6,2499,14994
+1009,2026-04-02,Customer 001,Festive Hamper,Hampers,Noida,11,2499,27489
+1010,2026-04-03,Customer 052,Leather Diary,Stationery,Faridabad,6,749,4494
+1011,2026-04-03,Customer 026,Festive Hamper,Hampers,Faridabad,17,2499,42483
+1012,2026-04-03,Customer 018,Festive Hamper,Hampers,Delhi,17,2499,42483
+1013,2026-04-03,Customer 010,Dry Fruit Box,Food,Faridabad,1,1299,1299
+1014,2026-04-04,Customer 044,Brass Diya Set,Decor,Noida,5,899,4495
+1015,2026-04-04,Customer 038,Scented Candle Trio,Decor,Delhi,5,649,3245
+1016,2026-04-05,Customer 059,Festive Hamper,Hampers,Delhi,19,2499,47481
+1017,2026-04-05,Customer 026,Scented Candle Trio,Decor,Delhi,2,649,1298
+1018,2026-04-05,Customer 022,Festive Hamper,Hampers,Noida,3,2499,7497
+1019,2026-04-06,Customer 022,Dry Fruit Box,Food,Noida,4,1299,5196
+1020,2026-04-06,Customer 046,Brass Diya Set,Decor,Gurugram,1,899,899
+1021,2026-04-06,Customer 041,Scented Candle Trio,Decor,Noida,2,649,1298
+1022,2026-04-06,Customer 030,Scented Candle Trio,Decor,Gurugram,6,649,3894
+1023,2026-04-06,Customer 020,Festive Hamper,Hampers,Noida,1,2499,2499
+1024,2026-04-07,Customer 036,Desk Organizer,Stationery,Delhi,7,999,6993
+1025,2026-04-07,Customer 036,Desk Organizer,Stationery,Delhi,5,999,4995
+1026,2026-04-07,Customer 041,Festive Hamper,Hampers,Gurugram,17,2499,42483
+1027,2026-04-08,Customer 021,Custom Mug,Merch,Delhi,7,399,2793
+1028,2026-04-08,Customer 055,Dry Fruit Box,Food,Gurugram,1,1299,1299
+1029,2026-04-08,Customer 005,Leather Diary,Stationery,Delhi,5,749,3745
+1030,2026-04-08,Customer 058,Dry Fruit Box,Food,Delhi,4,1299,5196
+1031,2026-04-08,Customer 037,Desk Organizer,Stationery,Noida,8,999,7992
+1032,2026-04-09,Customer 014,Dry Fruit Box,Food,Delhi,5,1299,6495
+1033,2026-04-09,Customer 060,Festive Hamper,Hampers,Noida,7,2499,17493
+1034,2026-04-09,Customer 018,Festive Hamper,Hampers,Noida,15,2499,37485
+1035,2026-04-09,Customer 004,Tea Sampler,Food,Noida,3,549,1647
+1036,2026-04-10,Customer 046,Custom Mug,Merch,Faridabad,2,399,798
+1037,2026-04-10,Customer 015,Festive Hamper,Hampers,Delhi,1,2499,2499
+1038,2026-04-10,Customer 047,Dry Fruit Box,Food,Gurugram,2,1299,2598
+1039,2026-04-10,Customer 021,Festive Hamper,Hampers,Delhi,4,2499,9996
+1040,2026-04-10,Customer 053,Scented Candle Trio,Decor,Delhi,1,649,649
+1041,2026-04-11,Customer 020,Festive Hamper,Hampers,Gurugram,16,2499,39984
+1042,2026-04-11,Customer 042,Custom Mug,Merch,Noida,4,399,1596
+1043,2026-04-11,Customer 019,Leather Diary,Stationery,Noida,4,749,2996
+1044,2026-04-11,Customer 024,Scented Candle Trio,Decor,Delhi,8,649,5192
+1045,2026-04-12,Customer 035,Tea Sampler,Food,Faridabad,5,549,2745
+1046,2026-04-12,Customer 052,Scented Candle Trio,Decor,Delhi,7,649,4543
+1047,2026-04-13,Customer 029,Brass Diya Set,Decor,Noida,1,899,899
+1048,2026-04-13,Customer 041,Custom Mug,Merch,Noida,7,399,2793
+1049,2026-04-13,Customer 034,Festive Hamper,Hampers,Gurugram,17,2499,42483
+1050,2026-04-14,Customer 012,Festive Hamper,Hampers,Noida,1,2499,2499
+1051,2026-04-14,Customer 042,Festive Hamper,Hampers,Delhi,4,2499,9996
+1052,2026-04-15,Customer 051,Festive Hamper,Hampers,Noida,3,2499,7497
+1053,2026-04-15,Customer 042,Brass Diya Set,Decor,Gurugram,4,899,3596
+1054,2026-04-16,Customer 025,Scented Candle Trio,Decor,Delhi,6,649,3894
+1055,2026-04-16,Customer 022,Festive Hamper,Hampers,Noida,1,2499,2499
+1056,2026-04-16,Customer 042,Festive Hamper,Hampers,Gurugram,15,2499,37485
+1057,2026-04-16,Customer 026,Festive Hamper,Hampers,Noida,6,2499,14994
+1058,2026-04-17,Customer 027,Custom Mug,Merch,Faridabad,7,399,2793
+1059,2026-04-17,Customer 007,Festive Hamper,Hampers,Faridabad,14,2499,34986
+1060,2026-04-18,Customer 035,Leather Diary,Stationery,Noida,3,749,2247
+1061,2026-04-18,Customer 004,Desk Organizer,Stationery,Noida,1,999,999
+1062,2026-04-18,Customer 012,Brass Diya Set,Decor,Noida,3,899,2697
+1063,2026-04-18,Customer 035,Festive Hamper,Hampers,Gurugram,6,2499,14994
+1064,2026-04-19,Customer 007,Dry Fruit Box,Food,Noida,4,1299,5196
+1065,2026-04-19,Customer 004,Leather Diary,Stationery,Faridabad,7,749,5243
+1066,2026-04-20,Customer 024,Leather Diary,Stationery,Delhi,6,749,4494
+1067,2026-04-20,Customer 059,Tea Sampler,Food,Gurugram,5,549,2745
+1068,2026-04-20,Customer 057,Leather Diary,Stationery,Faridabad,4,749,2996
+1069,2026-04-20,Customer 039,Custom Mug,Merch,Faridabad,1,399,399
+1070,2026-04-20,Customer 038,Festive Hamper,Hampers,Delhi,4,2499,9996
+1071,2026-04-21,Customer 032,Festive Hamper,Hampers,Noida,14,2499,34986
+1072,2026-04-21,Customer 012,Custom Mug,Merch,Noida,2,399,798
+1073,2026-04-21,Customer 045,Custom Mug,Merch,Noida,5,399,1995
+1074,2026-04-21,Customer 009,Tea Sampler,Food,Faridabad,8,549,4392
+1075,2026-04-21,Customer 009,Festive Hamper,Hampers,Faridabad,20,2499,49980
+1076,2026-04-22,Customer 019,Festive Hamper,Hampers,Noida,1,2499,2499
+1077,2026-04-22,Customer 021,Desk Organizer,Stationery,Gurugram,3,999,2997
+1078,2026-04-22,Customer 004,Brass Diya Set,Decor,Gurugram,3,899,2697
+1079,2026-04-23,Customer 055,Leather Diary,Stationery,Delhi,7,749,5243
+1080,2026-04-23,Customer 015,Brass Diya Set,Decor,Faridabad,3,899,2697
+1081,2026-04-23,Customer 059,Festive Hamper,Hampers,Gurugram,6,2499,14994
+1082,2026-04-24,Customer 022,Tea Sampler,Food,Noida,6,549,3294
+1083,2026-04-24,Customer 041,Desk Organizer,Stationery,Delhi,2,999,1998
+1084,2026-04-24,Customer 002,Scented Candle Trio,Decor,Faridabad,5,649,3245
+1085,2026-04-25,Customer 053,Festive Hamper,Hampers,Delhi,17,2499,42483
+1086,2026-04-25,Customer 039,Desk Organizer,Stationery,Noida,3,999,2997
+1087,2026-04-26,Customer 008,Brass Diya Set,Decor,Faridabad,4,899,3596
+1088,2026-04-26,Customer 035,Scented Candle Trio,Decor,Gurugram,1,649,649
+1089,2026-04-26,Customer 021,Festive Hamper,Hampers,Noida,15,2499,37485
+1090,2026-04-27,Customer 055,Tea Sampler,Food,Faridabad,6,549,3294
+1091,2026-04-27,Customer 010,Dry Fruit Box,Food,Delhi,8,1299,10392
+1092,2026-04-27,Customer 024,Brass Diya Set,Decor,Delhi,3,899,2697
+1093,2026-04-27,Customer 052,Scented Candle Trio,Decor,Faridabad,4,649,2596
+1094,2026-04-27,Customer 001,Scented Candle Trio,Decor,Gurugram,8,649,5192
+1095,2026-04-28,Customer 054,Scented Candle Trio,Decor,Gurugram,3,649,1947
+1096,2026-04-28,Customer 001,Dry Fruit Box,Food,Noida,4,1299,5196
+1097,2026-04-28,Customer 041,Leather Diary,Stationery,Faridabad,4,749,2996
+1098,2026-04-28,Customer 025,Tea Sampler,Food,Noida,1,549,549
+1099,2026-04-28,Customer 006,Tea Sampler,Food,Faridabad,3,549,1647
+1100,2026-04-29,Customer 006,Scented Candle Trio,Decor,Gurugram,6,649,3894
+1101,2026-04-29,Customer 056,Brass Diya Set,Decor,Faridabad,8,899,7192
+1102,2026-04-29,Customer 015,Leather Diary,Stationery,Gurugram,3,749,2247
+1103,2026-04-29,Customer 044,Festive Hamper,Hampers,Faridabad,12,2499,29988
+1104,2026-04-29,Customer 055,Brass Diya Set,Decor,Faridabad,1,899,899
+1105,2026-04-30,Customer 035,Desk Organizer,Stationery,Gurugram,7,999,6993
+1106,2026-04-30,Customer 011,Dry Fruit Box,Food,Faridabad,2,1299,2598
+1107,2026-04-30,Customer 018,Brass Diya Set,Decor,Faridabad,4,899,3596
+1108,2026-05-01,Customer 026,Leather Diary,Stationery,Noida,5,749,3745
+1109,2026-05-01,Customer 013,Tea Sampler,Food,Gurugram,3,549,1647
+1110,2026-05-01,Customer 027,Festive Hamper,Hampers,Delhi,10,2499,24990
+1111,2026-05-01,Customer 018,Festive Hamper,Hampers,Delhi,8,2499,19992
+1112,2026-05-01,Customer 051,Festive Hamper,Hampers,Delhi,4,2499,9996
+1113,2026-05-02,Customer 051,Desk Organizer,Stationery,Gurugram,4,999,3996
+1114,2026-05-02,Customer 016,Scented Candle Trio,Decor,Faridabad,7,649,4543
+1115,2026-05-03,Customer 039,Scented Candle Trio,Decor,Noida,5,649,3245
+1116,2026-05-03,Customer 051,Tea Sampler,Food,Faridabad,7,549,3843
+1117,2026-05-03,Customer 017,Brass Diya Set,Decor,Delhi,2,899,1798
+1118,2026-05-03,Customer 011,Tea Sampler,Food,Noida,8,549,4392
+1119,2026-05-03,Customer 012,Festive Hamper,Hampers,Noida,10,2499,24990
+1120,2026-05-04,Customer 003,Scented Candle Trio,Decor,Delhi,6,649,3894
+1121,2026-05-04,Customer 046,Festive Hamper,Hampers,Gurugram,19,2499,47481
+1122,2026-05-04,Customer 034,Desk Organizer,Stationery,Gurugram,7,999,6993
+1123,2026-05-04,Customer 052,Tea Sampler,Food,Faridabad,1,549,549
+1124,2026-05-04,Customer 032,Scented Candle Trio,Decor,Gurugram,7,649,4543
+1125,2026-05-05,Customer 046,Leather Diary,Stationery,Faridabad,6,749,4494
+1126,2026-05-05,Customer 055,Scented Candle Trio,Decor,Faridabad,7,649,4543
+1127,2026-05-05,Customer 022,Festive Hamper,Hampers,Faridabad,13,2499,32487
+1128,2026-05-05,Customer 006,Custom Mug,Merch,Gurugram,8,399,3192
+1129,2026-05-06,Customer 002,Brass Diya Set,Decor,Delhi,6,899,5394
+1130,2026-05-06,Customer 058,Tea Sampler,Food,Noida,4,549,2196
+1131,2026-05-06,Customer 016,Festive Hamper,Hampers,Gurugram,9,2499,22491
+1132,2026-05-06,Customer 026,Scented Candle Trio,Decor,Delhi,2,649,1298
+1133,2026-05-06,Customer 038,Festive Hamper,Hampers,Noida,17,2499,42483
+1134,2026-05-07,Customer 007,Dry Fruit Box,Food,Delhi,8,1299,10392
+1135,2026-05-07,Customer 046,Leather Diary,Stationery,Noida,7,749,5243
+1136,2026-05-07,Customer 036,Dry Fruit Box,Food,Faridabad,5,1299,6495
+1137,2026-05-07,Customer 044,Brass Diya Set,Decor,Gurugram,5,899,4495
+1138,2026-05-07,Customer 045,Brass Diya Set,Decor,Gurugram,3,899,2697
+1139,2026-05-08,Customer 005,Festive Hamper,Hampers,Gurugram,10,2499,24990
+1140,2026-05-08,Customer 043,Festive Hamper,Hampers,Faridabad,4,2499,9996
+1141,2026-05-08,Customer 001,Dry Fruit Box,Food,Faridabad,8,1299,10392
+1142,2026-05-09,Customer 048,Brass Diya Set,Decor,Gurugram,4,899,3596
+1143,2026-05-09,Customer 025,Dry Fruit Box,Food,Noida,8,1299,10392
+1144,2026-05-09,Customer 045,Leather Diary,Stationery,Noida,5,749,3745
+1145,2026-05-09,Customer 060,Festive Hamper,Hampers,Delhi,4,2499,9996
+1146,2026-05-10,Customer 041,Dry Fruit Box,Food,Delhi,7,1299,9093
+1147,2026-05-10,Customer 033,Brass Diya Set,Decor,Noida,2,899,1798
+1148,2026-05-10,Customer 016,Tea Sampler,Food,Noida,4,549,2196
+1149,2026-05-10,Customer 048,Festive Hamper,Hampers,Delhi,13,2499,32487
+1150,2026-05-11,Customer 055,Festive Hamper,Hampers,Gurugram,17,2499,42483
+1151,2026-05-11,Customer 058,Festive Hamper,Hampers,Delhi,14,2499,34986
+1152,2026-05-11,Customer 002,Festive Hamper,Hampers,Delhi,14,2499,34986
+1153,2026-05-11,Customer 002,Custom Mug,Merch,Noida,1,399,399
+1154,2026-05-11,Customer 029,Brass Diya Set,Decor,Faridabad,1,899,899
+1155,2026-05-12,Customer 049,Dry Fruit Box,Food,Gurugram,7,1299,9093
+1156,2026-05-12,Customer 030,Festive Hamper,Hampers,Delhi,15,2499,37485
+1157,2026-05-12,Customer 008,Desk Organizer,Stationery,Delhi,2,999,1998
+1158,2026-05-12,Customer 014,Custom Mug,Merch,Faridabad,4,399,1596
+1159,2026-05-13,Customer 056,Custom Mug,Merch,Faridabad,8,399,3192
+1160,2026-05-13,Customer 017,Festive Hamper,Hampers,Gurugram,15,2499,37485
+1161,2026-05-13,Customer 030,Festive Hamper,Hampers,Faridabad,15,2499,37485
+1162,2026-05-14,Customer 027,Festive Hamper,Hampers,Faridabad,12,2499,29988
+1163,2026-05-14,Customer 024,Dry Fruit Box,Food,Delhi,1,1299,1299
+1164,2026-05-14,Customer 021,Tea Sampler,Food,Faridabad,8,549,4392
+1165,2026-05-14,Customer 011,Dry Fruit Box,Food,Gurugram,7,1299,9093
+1166,2026-05-14,Customer 022,Desk Organizer,Stationery,Delhi,2,999,1998
+1167,2026-05-15,Customer 043,Dry Fruit Box,Food,Delhi,5,1299,6495
+1168,2026-05-15,Customer 010,Scented Candle Trio,Decor,Delhi,8,649,5192
+1169,2026-05-15,Customer 032,Festive Hamper,Hampers,Noida,9,2499,22491
+1170,2026-05-15,Customer 055,Scented Candle Trio,Decor,Delhi,3,649,1947
+1171,2026-05-15,Customer 031,Festive Hamper,Hampers,Gurugram,2,2499,4998
+1172,2026-05-16,Customer 001,Festive Hamper,Hampers,Gurugram,9,2499,22491
+1173,2026-05-16,Customer 020,Brass Diya Set,Decor,Faridabad,7,899,6293
+1174,2026-05-16,Customer 020,Dry Fruit Box,Food,Delhi,6,1299,7794
+1175,2026-05-16,Customer 025,Scented Candle Trio,Decor,Gurugram,2,649,1298
+1176,2026-05-17,Customer 060,Festive Hamper,Hampers,Delhi,10,2499,24990
+1177,2026-05-17,Customer 054,Festive Hamper,Hampers,Faridabad,2,2499,4998
+1178,2026-05-18,Customer 050,Brass Diya Set,Decor,Delhi,6,899,5394
+1179,2026-05-18,Customer 010,Scented Candle Trio,Decor,Faridabad,7,649,4543
+1180,2026-05-18,Customer 049,Festive Hamper,Hampers,Faridabad,14,2499,34986
+1181,2026-05-18,Customer 046,Brass Diya Set,Decor,Gurugram,7,899,6293
+1182,2026-05-19,Customer 030,Desk Organizer,Stationery,Noida,6,999,5994
+1183,2026-05-19,Customer 037,Brass Diya Set,Decor,Faridabad,6,899,5394
+1184,2026-05-19,Customer 051,Brass Diya Set,Decor,Gurugram,1,899,899
+1185,2026-05-19,Customer 032,Festive Hamper,Hampers,Faridabad,5,2499,12495
+1186,2026-05-19,Customer 012,Leather Diary,Stationery,Delhi,5,749,3745
+1187,2026-05-20,Customer 056,Scented Candle Trio,Decor,Delhi,1,649,649
+1188,2026-05-20,Customer 026,Festive Hamper,Hampers,Delhi,14,2499,34986
+1189,2026-05-20,Customer 002,Brass Diya Set,Decor,Noida,8,899,7192
+1190,2026-05-21,Customer 046,Brass Diya Set,Decor,Noida,8,899,7192
+1191,2026-05-21,Customer 002,Tea Sampler,Food,Gurugram,4,549,2196
+1192,2026-05-22,Customer 037,Scented Candle Trio,Decor,Faridabad,8,649,5192
+1193,2026-05-22,Customer 048,Desk Organizer,Stationery,Gurugram,1,999,999
+1194,2026-05-22,Customer 023,Desk Organizer,Stationery,Gurugram,8,999,7992
+1195,2026-05-22,Customer 037,Festive Hamper,Hampers,Faridabad,16,2499,39984
+1196,2026-05-22,Customer 010,Festive Hamper,Hampers,Gurugram,9,2499,22491
+1197,2026-05-23,Customer 053,Tea Sampler,Food,Noida,7,549,3843
+1198,2026-05-23,Customer 055,Custom Mug,Merch,Faridabad,2,399,798
+1199,2026-05-23,Customer 057,Scented Candle Trio,Decor,Faridabad,5,649,3245
+1200,2026-05-23,Customer 046,Leather Diary,Stationery,Delhi,8,749,5992
+1201,2026-05-23,Customer 007,Scented Candle Trio,Decor,Gurugram,5,649,3245
+1202,2026-05-24,Customer 026,Leather Diary,Stationery,Delhi,6,749,4494
+1203,2026-05-24,Customer 038,Brass Diya Set,Decor,Delhi,8,899,7192
+1204,2026-05-24,Customer 003,Scented Candle Trio,Decor,Gurugram,2,649,1298
+1205,2026-05-24,Customer 024,Festive Hamper,Hampers,Delhi,6,2499,14994
+1206,2026-05-24,Customer 034,Festive Hamper,Hampers,Faridabad,6,2499,14994
+1207,2026-05-25,Customer 008,Festive Hamper,Hampers,Noida,3,2499,7497
+1208,2026-05-25,Customer 013,Festive Hamper,Hampers,Gurugram,9,2499,22491
+1209,2026-05-26,Customer 008,Dry Fruit Box,Food,Delhi,3,1299,3897
+1210,2026-05-26,Customer 006,Festive Hamper,Hampers,Gurugram,4,2499,9996
+1211,2026-05-26,Customer 007,Festive Hamper,Hampers,Noida,19,2499,47481
+1212,2026-05-26,Customer 015,Festive Hamper,Hampers,Gurugram,6,2499,14994
+1213,2026-05-26,Customer 040,Brass Diya Set,Decor,Noida,1,899,899
+1214,2026-05-27,Customer 034,Brass Diya Set,Decor,Delhi,8,899,7192
+1215,2026-05-27,Customer 039,Brass Diya Set,Decor,Delhi,1,899,899
+1216,2026-05-28,Customer 045,Desk Organizer,Stationery,Delhi,3,999,2997
+1217,2026-05-28,Customer 006,Scented Candle Trio,Decor,Noida,7,649,4543
+1218,2026-05-28,Customer 050,Festive Hamper,Hampers,Delhi,10,2499,24990
+1219,2026-05-28,Customer 055,Festive Hamper,Hampers,Faridabad,16,2499,39984
+1220,2026-05-28,Customer 014,Brass Diya Set,Decor,Delhi,2,899,1798
+1221,2026-05-29,Customer 029,Festive Hamper,Hampers,Delhi,16,2499,39984
+1222,2026-05-29,Customer 058,Leather Diary,Stationery,Delhi,3,749,2247
+1223,2026-05-30,Customer 017,Custom Mug,Merch,Gurugram,8,399,3192
+1224,2026-05-30,Customer 052,Scented Candle Trio,Decor,Faridabad,2,649,1298
+1225,2026-05-30,Customer 045,Brass Diya Set,Decor,Noida,3,899,2697
+1226,2026-05-30,Customer 047,Festive Hamper,Hampers,Delhi,20,2499,49980
+1227,2026-05-30,Customer 004,Festive Hamper,Hampers,Delhi,12,2499,29988
+1228,2026-05-31,Customer 035,Festive Hamper,Hampers,Faridabad,6,2499,14994
+1229,2026-05-31,Customer 017,Dry Fruit Box,Food,Noida,5,1299,6495
+1230,2026-05-31,Customer 030,Brass Diya Set,Decor,Noida,4,899,3596
+1231,2026-06-01,Customer 060,Festive Hamper,Hampers,Noida,11,2499,27489
+1232,2026-06-01,Customer 036,Brass Diya Set,Decor,Delhi,5,899,4495
+1233,2026-06-01,Customer 013,Festive Hamper,Hampers,Gurugram,15,2499,37485
+1234,2026-06-02,Customer 014,Festive Hamper,Hampers,Gurugram,19,2499,47481
+1235,2026-06-02,Customer 045,Custom Mug,Merch,Noida,8,399,3192
+1236,2026-06-02,Customer 009,Tea Sampler,Food,Delhi,1,549,549
+1237,2026-06-02,Customer 022,Leather Diary,Stationery,Delhi,1,749,749
+1238,2026-06-03,Customer 039,Festive Hamper,Hampers,Noida,15,2499,37485
+1239,2026-06-03,Customer 038,Leather Diary,Stationery,Gurugram,6,749,4494
+1240,2026-06-03,Customer 033,Dry Fruit Box,Food,Delhi,1,1299,1299
+1241,2026-06-03,Customer 011,Brass Diya Set,Decor,Noida,2,899,1798
+1242,2026-06-03,Customer 055,Festive Hamper,Hampers,Gurugram,17,2499,42483
+1243,2026-06-04,Customer 049,Dry Fruit Box,Food,Faridabad,4,1299,5196
+1244,2026-06-04,Customer 014,Custom Mug,Merch,Gurugram,7,399,2793
+1245,2026-06-04,Customer 046,Brass Diya Set,Decor,Delhi,1,899,899
+1246,2026-06-04,Customer 033,Custom Mug,Merch,Gurugram,6,399,2394
+1247,2026-06-04,Customer 048,Scented Candle Trio,Decor,Gurugram,2,649,1298
+1248,2026-06-05,Customer 046,Brass Diya Set,Decor,Gurugram,4,899,3596
+1249,2026-06-05,Customer 047,Brass Diya Set,Decor,Delhi,5,899,4495
+1250,2026-06-06,Customer 014,Custom Mug,Merch,Faridabad,4,399,1596
+1251,2026-06-06,Customer 050,Festive Hamper,Hampers,Delhi,13,2499,32487
+1252,2026-06-06,Customer 041,Dry Fruit Box,Food,Delhi,5,1299,6495
+1253,2026-06-06,Customer 044,Festive Hamper,Hampers,Delhi,8,2499,19992
+1254,2026-06-06,Customer 031,Scented Candle Trio,Decor,Faridabad,7,649,4543
+1255,2026-06-07,Customer 003,Leather Diary,Stationery,Gurugram,4,749,2996
+1256,2026-06-07,Customer 049,Tea Sampler,Food,Faridabad,3,549,1647
+1257,2026-06-07,Customer 023,Custom Mug,Merch,Noida,1,399,399
+1258,2026-06-08,Customer 002,Festive Hamper,Hampers,Gurugram,16,2499,39984
+1259,2026-06-08,Customer 043,Custom Mug,Merch,Delhi,2,399,798
+1260,2026-06-09,Customer 002,Dry Fruit Box,Food,Faridabad,5,1299,6495
+1261,2026-06-09,Customer 017,Dry Fruit Box,Food,Faridabad,6,1299,7794
+1262,2026-06-10,Customer 049,Brass Diya Set,Decor,Gurugram,5,899,4495
+1263,2026-06-10,Customer 013,Desk Organizer,Stationery,Noida,2,999,1998
+1264,2026-06-10,Customer 020,Festive Hamper,Hampers,Gurugram,8,2499,19992
+1265,2026-06-11,Customer 047,Leather Diary,Stationery,Faridabad,1,749,749
+1266,2026-06-11,Customer 025,Desk Organizer,Stationery,Faridabad,2,999,1998
+1267,2026-06-11,Customer 052,Desk Organizer,Stationery,Noida,6,999,5994
+1268,2026-06-11,Customer 028,Festive Hamper,Hampers,Gurugram,2,2499,4998
+1269,2026-06-12,Customer 021,Festive Hamper,Hampers,Delhi,12,2499,29988
+1270,2026-06-12,Customer 016,Leather Diary,Stationery,Faridabad,3,749,2247
+1271,2026-06-13,Customer 042,Festive Hamper,Hampers,Gurugram,10,2499,24990
+1272,2026-06-13,Customer 050,Brass Diya Set,Decor,Faridabad,8,899,7192
+1273,2026-06-14,Customer 003,Festive Hamper,Hampers,Delhi,15,2499,37485
+1274,2026-06-14,Customer 041,Scented Candle Trio,Decor,Delhi,8,649,5192
+1275,2026-06-14,Customer 038,Dry Fruit Box,Food,Delhi,2,1299,2598
+1276,2026-06-14,Customer 052,Desk Organizer,Stationery,Faridabad,5,999,4995
+1277,2026-06-14,Customer 006,Custom Mug,Merch,Faridabad,7,399,2793
+1278,2026-06-15,Customer 057,Festive Hamper,Hampers,Delhi,14,2499,34986
+1279,2026-06-15,Customer 030,Festive Hamper,Hampers,Noida,9,2499,22491
+1280,2026-06-15,Customer 027,Brass Diya Set,Decor,Faridabad,6,899,5394
+1281,2026-06-16,Customer 046,Festive Hamper,Hampers,Faridabad,16,2499,39984
+1282,2026-06-16,Customer 018,Brass Diya Set,Decor,Delhi,6,899,5394
+1283,2026-06-17,Customer 023,Brass Diya Set,Decor,Delhi,4,899,3596
+1284,2026-06-17,Customer 059,Brass Diya Set,Decor,Faridabad,4,899,3596
+1285,2026-06-18,Customer 011,Scented Candle Trio,Decor,Noida,5,649,3245
+1286,2026-06-18,Customer 046,Festive Hamper,Hampers,Delhi,13,2499,32487
+1287,2026-06-18,Customer 015,Desk Organizer,Stationery,Delhi,3,999,2997
+1288,2026-06-19,Customer 020,Festive Hamper,Hampers,Delhi,19,2499,47481
+1289,2026-06-19,Customer 009,Festive Hamper,Hampers,Delhi,8,2499,19992
+1290,2026-06-19,Customer 050,Custom Mug,Merch,Faridabad,6,399,2394
+1291,2026-06-19,Customer 004,Leather Diary,Stationery,Delhi,2,749,1498
+1292,2026-06-20,Customer 024,Desk Organizer,Stationery,Gurugram,6,999,5994
+1293,2026-06-20,Customer 034,Dry Fruit Box,Food,Delhi,1,1299,1299
+1294,2026-06-20,Customer 014,Custom Mug,Merch,Faridabad,6,399,2394
+1295,2026-06-21,Customer 046,Tea Sampler,Food,Delhi,7,549,3843
+1296,2026-06-21,Customer 017,Festive Hamper,Hampers,Noida,11,2499,27489
+1297,2026-06-21,Customer 053,Custom Mug,Merch,Gurugram,3,399,1197
+1298,2026-06-21,Customer 017,Scented Candle Trio,Decor,Delhi,7,649,4543
+1299,2026-06-21,Customer 021,Leather Diary,Stationery,Delhi,3,749,2247
+1300,2026-06-22,Customer 056,Festive Hamper,Hampers,Gurugram,18,2499,44982
+1301,2026-06-22,Customer 008,Festive Hamper,Hampers,Gurugram,7,2499,17493
+1302,2026-06-23,Customer 027,Leather Diary,Stationery,Noida,2,749,1498
+1303,2026-06-23,Customer 038,Leather Diary,Stationery,Gurugram,2,749,1498
+1304,2026-06-23,Customer 014,Scented Candle Trio,Decor,Gurugram,2,649,1298
+1305,2026-06-24,Customer 011,Festive Hamper,Hampers,Delhi,3,2499,7497
+1306,2026-06-24,Customer 044,Festive Hamper,Hampers,Gurugram,17,2499,42483
+1307,2026-06-24,Customer 003,Scented Candle Trio,Decor,Delhi,7,649,4543
+1308,2026-06-24,Customer 048,Festive Hamper,Hampers,Delhi,20,2499,49980
+1309,2026-06-25,Customer 042,Dry Fruit Box,Food,Gurugram,3,1299,3897
+1310,2026-06-25,Customer 026,Festive Hamper,Hampers,Noida,3,2499,7497
+1311,2026-06-25,Customer 022,Dry Fruit Box,Food,Gurugram,2,1299,2598
+1312,2026-06-25,Customer 021,Desk Organizer,Stationery,Faridabad,7,999,6993
+1313,2026-06-26,Customer 045,Custom Mug,Merch,Faridabad,2,399,798
+1314,2026-06-26,Customer 040,Custom Mug,Merch,Faridabad,8,399,3192
+1315,2026-06-26,Customer 041,Tea Sampler,Food,Delhi,5,549,2745
+1316,2026-06-26,Customer 013,Festive Hamper,Hampers,Noida,20,2499,49980
+1317,2026-06-26,Customer 001,Tea Sampler,Food,Gurugram,4,549,2196
+1318,2026-06-27,Customer 025,Festive Hamper,Hampers,Gurugram,9,2499,22491
+1319,2026-06-27,Customer 046,Festive Hamper,Hampers,Faridabad,12,2499,29988
+1320,2026-06-28,Customer 002,Scented Candle Trio,Decor,Gurugram,6,649,3894
+1321,2026-06-28,Customer 032,Dry Fruit Box,Food,Delhi,4,1299,5196
+1322,2026-06-28,Customer 021,Festive Hamper,Hampers,Noida,7,2499,17493
+1323,2026-06-28,Customer 053,Festive Hamper,Hampers,Noida,12,2499,29988
+1324,2026-06-29,Customer 019,Brass Diya Set,Decor,Gurugram,7,899,6293
+1325,2026-06-29,Customer 013,Brass Diya Set,Decor,Gurugram,6,899,5394
+1326,2026-06-29,Customer 030,Custom Mug,Merch,Noida,8,399,3192
+1327,2026-06-29,Customer 043,Brass Diya Set,Decor,Faridabad,3,899,2697
+1328,2026-06-29,Customer 037,Festive Hamper,Hampers,Delhi,12,2499,29988
+1329,2026-06-30,Customer 059,Festive Hamper,Hampers,Faridabad,1,2499,2499
+1330,2026-06-30,Customer 035,Festive Hamper,Hampers,Faridabad,12,2499,29988
+1331,2026-06-30,Customer 005,Festive Hamper,Hampers,Delhi,20,2499,49980
+1332,2026-06-30,Customer 011,Scented Candle Trio,Decor,Gurugram,2,649,1298
+1333,2026-06-30,Customer 049,Festive Hamper,Hampers,Noida,14,2499,34986
+1334,2026-07-01,Customer 007,Tea Sampler,Food,Gurugram,7,549,3843
+1335,2026-07-01,Customer 021,Scented Candle Trio,Decor,Delhi,7,649,4543
+1336,2026-07-01,Customer 045,Dry Fruit Box,Food,Gurugram,6,1299,7794
+1337,2026-07-02,Customer 024,Desk Organizer,Stationery,Noida,3,999,2997
+1338,2026-07-02,Customer 019,Scented Candle Trio,Decor,Gurugram,1,649,649
+1339,2026-07-03,Customer 051,Scented Candle Trio,Decor,Gurugram,6,649,3894
+1340,2026-07-03,Customer 052,Dry Fruit Box,Food,Delhi,2,1299,2598
+1341,2026-07-03,Customer 050,Scented Candle Trio,Decor,Faridabad,5,649,3245
+1342,2026-07-03,Customer 039,Brass Diya Set,Decor,Delhi,7,899,6293
+1343,2026-07-03,Customer 015,Leather Diary,Stationery,Faridabad,3,749,2247
+1344,2026-07-04,Customer 007,Dry Fruit Box,Food,Gurugram,4,1299,5196
+1345,2026-07-04,Customer 040,Brass Diya Set,Decor,Noida,3,899,2697
+1346,2026-07-05,Customer 012,Scented Candle Trio,Decor,Noida,3,649,1947
+1347,2026-07-05,Customer 021,Festive Hamper,Hampers,Noida,20,2499,49980
+1348,2026-07-06,Customer 023,Desk Organizer,Stationery,Faridabad,1,999,999
+1349,2026-07-06,Customer 036,Dry Fruit Box,Food,Delhi,1,1299,1299
+1350,2026-07-06,Customer 045,Desk Organizer,Stationery,Faridabad,3,999,2997
+1351,2026-07-06,Customer 010,Scented Candle Trio,Decor,Delhi,7,649,4543
+1352,2026-07-07,Customer 047,Brass Diya Set,Decor,Delhi,3,899,2697
+1353,2026-07-07,Customer 018,Festive Hamper,Hampers,Noida,14,2499,34986
+1354,2026-07-07,Customer 056,Brass Diya Set,Decor,Gurugram,5,899,4495
+1355,2026-07-07,Customer 032,Dry Fruit Box,Food,Gurugram,7,1299,9093
+1356,2026-07-08,Customer 042,Brass Diya Set,Decor,Delhi,6,899,5394
+1357,2026-07-08,Customer 052,Scented Candle Trio,Decor,Gurugram,3,649,1947
+1358,2026-07-08,Customer 011,Dry Fruit Box,Food,Delhi,4,1299,5196
+1359,2026-07-08,Customer 014,Desk Organizer,Stationery,Noida,3,999,2997
+1360,2026-07-09,Customer 021,Scented Candle Trio,Decor,Gurugram,3,649,1947
+1361,2026-07-09,Customer 027,Tea Sampler,Food,Faridabad,6,549,3294
+1362,2026-07-10,Customer 032,Custom Mug,Merch,Faridabad,3,399,1197
+1363,2026-07-10,Customer 044,Festive Hamper,Hampers,Gurugram,19,2499,47481
+1364,2026-07-10,Customer 005,Festive Hamper,Hampers,Faridabad,6,2499,14994
+1365,2026-07-11,Customer 019,Festive Hamper,Hampers,Noida,12,2499,29988
+1366,2026-07-11,Customer 050,Custom Mug,Merch,Faridabad,5,399,1995
+1367,2026-07-11,Customer 038,Festive Hamper,Hampers,Noida,8,2499,19992
+1368,2026-07-11,Customer 004,Festive Hamper,Hampers,Faridabad,4,2499,9996
+1369,2026-07-12,Customer 005,Festive Hamper,Hampers,Gurugram,8,2499,19992
+1370,2026-07-12,Customer 002,Festive Hamper,Hampers,Noida,12,2499,29988
+1371,2026-07-12,Customer 040,Desk Organizer,Stationery,Gurugram,4,999,3996
+1372,2026-07-13,Customer 042,Leather Diary,Stationery,Delhi,8,749,5992
+1373,2026-07-13,Customer 011,Festive Hamper,Hampers,Gurugram,19,2499,47481
+1374,2026-07-13,Customer 011,Dry Fruit Box,Food,Faridabad,6,1299,7794
+1375,2026-07-14,Customer 021,Scented Candle Trio,Decor,Delhi,1,649,649
+1376,2026-07-14,Customer 044,Scented Candle Trio,Decor,Gurugram,7,649,4543
+1377,2026-07-14,Customer 055,Brass Diya Set,Decor,Noida,5,899,4495
+1378,2026-07-15,Customer 055,Leather Diary,Stationery,Noida,3,749,2247
+1379,2026-07-15,Customer 028,Leather Diary,Stationery,Delhi,3,749,2247
+1380,2026-07-15,Customer 003,Tea Sampler,Food,Gurugram,4,549,2196
+1381,2026-07-15,Customer 034,Custom Mug,Merch,Noida,2,399,798
+1382,2026-07-15,Customer 044,Brass Diya Set,Decor,Faridabad,7,899,6293
+1383,2026-07-16,Customer 032,Festive Hamper,Hampers,Delhi,15,2499,37485
+1384,2026-07-16,Customer 003,Festive Hamper,Hampers,Gurugram,5,2499,12495
+1385,2026-07-17,Customer 053,Leather Diary,Stationery,Delhi,1,749,749
+1386,2026-07-17,Customer 038,Festive Hamper,Hampers,Noida,12,2499,29988
+1387,2026-07-18,Customer 027,Desk Organizer,Stationery,Gurugram,1,999,999
+1388,2026-07-18,Customer 025,Scented Candle Trio,Decor,Noida,5,649,3245
+1389,2026-07-18,Customer 014,Dry Fruit Box,Food,Faridabad,4,1299,5196
+1390,2026-07-18,Customer 058,Brass Diya Set,Decor,Noida,2,899,1798
+1391,2026-07-19,Customer 027,Brass Diya Set,Decor,Gurugram,4,899,3596
+1392,2026-07-19,Customer 009,Festive Hamper,Hampers,Delhi,12,2499,29988
+1393,2026-07-19,Customer 003,Festive Hamper,Hampers,Delhi,8,2499,19992
+1394,2026-07-20,Customer 058,Festive Hamper,Hampers,Noida,18,2499,44982
+1395,2026-07-20,Customer 045,Brass Diya Set,Decor,Noida,7,899,6293
+1396,2026-07-20,Customer 053,Brass Diya Set,Decor,Noida,8,899,7192
+1397,2026-07-20,Customer 017,Festive Hamper,Hampers,Delhi,5,2499,12495
+1398,2026-07-20,Customer 010,Custom Mug,Merch,Faridabad,3,399,1197
+1399,2026-07-21,Customer 029,Scented Candle Trio,Decor,Delhi,4,649,2596
+1400,2026-07-21,Customer 015,Scented Candle Trio,Decor,Gurugram,5,649,3245
+1401,2026-07-22,Customer 011,Custom Mug,Merch,Noida,7,399,2793
+1402,2026-07-22,Customer 015,Custom Mug,Merch,Noida,2,399,798
+1403,2026-07-22,Customer 040,Festive Hamper,Hampers,Delhi,10,2499,24990
+1404,2026-07-23,Customer 059,Festive Hamper,Hampers,Delhi,9,2499,22491
+1405,2026-07-23,Customer 029,Festive Hamper,Hampers,Faridabad,15,2499,37485
+1406,2026-07-23,Customer 009,Festive Hamper,Hampers,Faridabad,20,2499,49980
+1407,2026-07-23,Customer 057,Brass Diya Set,Decor,Noida,8,899,7192
+1408,2026-07-24,Customer 043,Brass Diya Set,Decor,Gurugram,7,899,6293
+1409,2026-07-24,Customer 027,Festive Hamper,Hampers,Faridabad,4,2499,9996
+1410,2026-07-25,Customer 005,Brass Diya Set,Decor,Delhi,1,899,899
+1411,2026-07-25,Customer 032,Brass Diya Set,Decor,Faridabad,1,899,899
+1412,2026-07-25,Customer 033,Scented Candle Trio,Decor,Delhi,2,649,1298
+1413,2026-07-25,Customer 045,Brass Diya Set,Decor,Faridabad,4,899,3596
+1414,2026-07-26,Customer 015,Desk Organizer,Stationery,Delhi,5,999,4995
+1415,2026-07-26,Customer 052,Festive Hamper,Hampers,Delhi,20,2499,49980
+1416,2026-07-27,Customer 056,Leather Diary,Stationery,Gurugram,3,749,2247
+1417,2026-07-27,Customer 047,Desk Organizer,Stationery,Faridabad,2,999,1998
+1418,2026-07-27,Customer 027,Dry Fruit Box,Food,Noida,2,1299,2598
+1419,2026-07-27,Customer 015,Scented Candle Trio,Decor,Gurugram,4,649,2596
+1420,2026-07-27,Customer 034,Brass Diya Set,Decor,Gurugram,6,899,5394
+1421,2026-07-28,Customer 006,Tea Sampler,Food,Gurugram,3,549,1647
+1422,2026-07-28,Customer 048,Leather Diary,Stationery,Delhi,6,749,4494
+1423,2026-07-29,Customer 002,Leather Diary,Stationery,Gurugram,4,749,2996
+1424,2026-07-29,Customer 030,Dry Fruit Box,Food,Delhi,1,1299,1299
+1425,2026-07-29,Customer 002,Leather Diary,Stationery,Faridabad,7,749,5243
+1426,2026-07-29,Customer 035,Custom Mug,Merch,Delhi,1,399,399
+1427,2026-07-30,Customer 032,Custom Mug,Merch,Gurugram,1,399,399
+1428,2026-07-30,Customer 042,Festive Hamper,Hampers,Delhi,19,2499,47481
+1429,2026-07-31,Customer 043,Desk Organizer,Stationery,Faridabad,1,999,999
+1430,2026-07-31,Customer 040,Festive Hamper,Hampers,Delhi,10,2499,24990
+1431,2026-07-31,Customer 001,Desk Organizer,Stationery,Noida,2,999,1998
+1432,2026-07-31,Customer 009,Brass Diya Set,Decor,Noida,4,899,3596
+1433,2026-08-01,Customer 015,Dry Fruit Box,Food,Gurugram,2,1299,2598
+1434,2026-08-01,Customer 044,Tea Sampler,Food,Gurugram,1,549,549
+1435,2026-08-01,Customer 033,Scented Candle Trio,Decor,Delhi,2,649,1298
+1436,2026-08-01,Customer 059,Tea Sampler,Food,Faridabad,7,549,3843
+1437,2026-08-02,Customer 043,Dry Fruit Box,Food,Noida,2,1299,2598
+1438,2026-08-02,Customer 028,Brass Diya Set,Decor,Delhi,8,899,7192
+1439,2026-08-02,Customer 052,Scented Candle Trio,Decor,Gurugram,1,649,649
+1440,2026-08-03,Customer 052,Tea Sampler,Food,Gurugram,1,549,549
+1441,2026-08-03,Customer 030,Brass Diya Set,Decor,Noida,8,899,7192
+1442,2026-08-03,Customer 029,Festive Hamper,Hampers,Gurugram,8,2499,19992
+1443,2026-08-03,Customer 055,Brass Diya Set,Decor,Gurugram,4,899,3596
+1444,2026-08-03,Customer 052,Custom Mug,Merch,Faridabad,7,399,2793
+1445,2026-08-04,Customer 009,Dry Fruit Box,Food,Delhi,2,1299,2598
+1446,2026-08-04,Customer 044,Brass Diya Set,Decor,Delhi,5,899,4495
+1447,2026-08-05,Customer 003,Desk Organizer,Stationery,Gurugram,4,999,3996
+1448,2026-08-05,Customer 016,Festive Hamper,Hampers,Gurugram,11,2499,27489
+1449,2026-08-05,Customer 004,Custom Mug,Merch,Faridabad,4,399,1596
+1450,2026-08-06,Customer 020,Dry Fruit Box,Food,Delhi,3,1299,3897
+1451,2026-08-06,Customer 023,Tea Sampler,Food,Faridabad,6,549,3294
+1452,2026-08-06,Customer 036,Brass Diya Set,Decor,Noida,3,899,2697
+1453,2026-08-06,Customer 037,Scented Candle Trio,Decor,Delhi,4,649,2596
+1454,2026-08-07,Customer 038,Desk Organizer,Stationery,Noida,5,999,4995
+1455,2026-08-07,Customer 042,Festive Hamper,Hampers,Faridabad,12,2499,29988
+1456,2026-08-07,Customer 043,Desk Organizer,Stationery,Delhi,6,999,5994
+1457,2026-08-08,Customer 013,Festive Hamper,Hampers,Faridabad,19,2499,47481
+1458,2026-08-08,Customer 010,Scented Candle Trio,Decor,Faridabad,3,649,1947
+1459,2026-08-09,Customer 056,Desk Organizer,Stationery,Faridabad,8,999,7992
+1460,2026-08-09,Customer 049,Festive Hamper,Hampers,Gurugram,15,2499,37485
+1461,2026-08-09,Customer 027,Brass Diya Set,Decor,Noida,1,899,899
+1462,2026-08-09,Customer 030,Leather Diary,Stationery,Faridabad,4,749,2996
+1463,2026-08-10,Customer 005,Leather Diary,Stationery,Delhi,7,749,5243
+1464,2026-08-10,Customer 044,Leather Diary,Stationery,Noida,8,749,5992
+1465,2026-08-10,Customer 038,Leather Diary,Stationery,Faridabad,2,749,1498
+1466,2026-08-10,Customer 035,Desk Organizer,Stationery,Delhi,8,999,7992
+1467,2026-08-10,Customer 054,Tea Sampler,Food,Faridabad,8,549,4392
+1468,2026-08-11,Customer 013,Custom Mug,Merch,Gurugram,3,399,1197
+1469,2026-08-11,Customer 012,Scented Candle Trio,Decor,Faridabad,3,649,1947
+1470,2026-08-11,Customer 040,Brass Diya Set,Decor,Delhi,7,899,6293
+1471,2026-08-11,Customer 002,Custom Mug,Merch,Faridabad,6,399,2394
+1472,2026-08-11,Customer 003,Festive Hamper,Hampers,Faridabad,7,2499,17493
+1473,2026-08-12,Customer 007,Dry Fruit Box,Food,Gurugram,1,1299,1299
+1474,2026-08-12,Customer 002,Desk Organizer,Stationery,Gurugram,1,999,999
+1475,2026-08-12,Customer 026,Leather Diary,Stationery,Delhi,3,749,2247
+1476,2026-08-12,Customer 035,Scented Candle Trio,Decor,Gurugram,5,649,3245
+1477,2026-08-12,Customer 012,Tea Sampler,Food,Noida,4,549,2196
+1478,2026-08-13,Customer 032,Custom Mug,Merch,Delhi,2,399,798
+1479,2026-08-13,Customer 027,Festive Hamper,Hampers,Delhi,7,2499,17493
+1480,2026-08-13,Customer 042,Festive Hamper,Hampers,Noida,3,2499,7497
+1481,2026-08-13,Customer 009,Leather Diary,Stationery,Noida,5,749,3745
+1482,2026-08-14,Customer 047,Festive Hamper,Hampers,Gurugram,9,2499,22491
+1483,2026-08-14,Customer 011,Festive Hamper,Hampers,Gurugram,19,2499,47481
+1484,2026-08-15,Customer 008,Festive Hamper,Hampers,Faridabad,11,2499,27489
+1485,2026-08-15,Customer 058,Custom Mug,Merch,Delhi,5,399,1995
+1486,2026-08-15,Customer 005,Festive Hamper,Hampers,Faridabad,8,2499,19992
+1487,2026-08-15,Customer 039,Brass Diya Set,Decor,Noida,3,899,2697
+1488,2026-08-15,Customer 030,Scented Candle Trio,Decor,Noida,7,649,4543
+1489,2026-08-16,Customer 050,Tea Sampler,Food,Noida,8,549,4392
+1490,2026-08-16,Customer 002,Leather Diary,Stationery,Delhi,1,749,749
+1491,2026-08-17,Customer 034,Festive Hamper,Hampers,Delhi,9,2499,22491
+1492,2026-08-17,Customer 049,Tea Sampler,Food,Noida,8,549,4392
+1493,2026-08-17,Customer 019,Scented Candle Trio,Decor,Faridabad,6,649,3894
+1494,2026-08-18,Customer 057,Dry Fruit Box,Food,Faridabad,8,1299,10392
+1495,2026-08-18,Customer 017,Custom Mug,Merch,Delhi,3,399,1197
+1496,2026-08-18,Customer 004,Festive Hamper,Hampers,Delhi,15,2499,37485
+1497,2026-08-18,Customer 057,Brass Diya Set,Decor,Noida,7,899,6293
+1498,2026-08-19,Customer 010,Brass Diya Set,Decor,Gurugram,4,899,3596
+1499,2026-08-19,Customer 051,Brass Diya Set,Decor,Delhi,7,899,6293
+1500,2026-08-19,Customer 059,Custom Mug,Merch,Gurugram,6,399,2394
+1501,2026-08-20,Customer 028,Tea Sampler,Food,Delhi,3,549,1647
+1502,2026-08-20,Customer 036,Custom Mug,Merch,Gurugram,4,399,1596
+1503,2026-08-20,Customer 020,Dry Fruit Box,Food,Gurugram,6,1299,7794
+1504,2026-08-20,Customer 028,Festive Hamper,Hampers,Gurugram,5,2499,12495
+1505,2026-08-20,Customer 021,Festive Hamper,Hampers,Gurugram,4,2499,9996
+1506,2026-08-21,Customer 001,Scented Candle Trio,Decor,Faridabad,2,649,1298
+1507,2026-08-21,Customer 056,Desk Organizer,Stationery,Gurugram,2,999,1998
+1508,2026-08-21,Customer 011,Leather Diary,Stationery,Noida,7,749,5243
+1509,2026-08-22,Customer 058,Tea Sampler,Food,Noida,8,549,4392
+1510,2026-08-22,Customer 049,Desk Organizer,Stationery,Delhi,2,999,1998
+1511,2026-08-22,Customer 045,Desk Organizer,Stationery,Faridabad,8,999,7992
+1512,2026-08-22,Customer 022,Dry Fruit Box,Food,Noida,1,1299,1299
+1513,2026-08-23,Customer 044,Festive Hamper,Hampers,Faridabad,2,2499,4998
+1514,2026-08-23,Customer 037,Custom Mug,Merch,Faridabad,7,399,2793
+1515,2026-08-23,Customer 012,Tea Sampler,Food,Faridabad,1,549,549
+1516,2026-08-24,Customer 012,Brass Diya Set,Decor,Gurugram,7,899,6293
+1517,2026-08-24,Customer 024,Desk Organizer,Stationery,Delhi,6,999,5994
+1518,2026-08-24,Customer 054,Dry Fruit Box,Food,Faridabad,8,1299,10392
+1519,2026-08-24,Customer 020,Festive Hamper,Hampers,Noida,8,2499,19992
+1520,2026-08-24,Customer 055,Leather Diary,Stationery,Gurugram,7,749,5243
+1521,2026-08-25,Customer 010,Dry Fruit Box,Food,Noida,1,1299,1299
+1522,2026-08-25,Customer 014,Brass Diya Set,Decor,Gurugram,3,899,2697
+1523,2026-08-25,Customer 008,Scented Candle Trio,Decor,Delhi,5,649,3245
+1524,2026-08-26,Customer 039,Dry Fruit Box,Food,Faridabad,8,1299,10392
+1525,2026-08-26,Customer 002,Dry Fruit Box,Food,Delhi,3,1299,3897
+1526,2026-08-27,Customer 008,Dry Fruit Box,Food,Delhi,5,1299,6495
+1527,2026-08-27,Customer 014,Festive Hamper,Hampers,Noida,19,2499,47481
+1528,2026-08-27,Customer 051,Custom Mug,Merch,Gurugram,1,399,399
+1529,2026-08-27,Customer 025,Custom Mug,Merch,Noida,4,399,1596
+1530,2026-08-28,Customer 001,Brass Diya Set,Decor,Faridabad,5,899,4495
+1531,2026-08-28,Customer 037,Leather Diary,Stationery,Faridabad,5,749,3745
+1532,2026-08-29,Customer 002,Tea Sampler,Food,Noida,8,549,4392
+1533,2026-08-29,Customer 025,Festive Hamper,Hampers,Faridabad,7,2499,17493
+1534,2026-08-29,Customer 016,Leather Diary,Stationery,Noida,3,749,2247
+1535,2026-08-30,Customer 047,Custom Mug,Merch,Faridabad,2,399,798
+1536,2026-08-30,Customer 031,Brass Diya Set,Decor,Noida,5,899,4495
+1537,2026-08-30,Customer 012,Custom Mug,Merch,Gurugram,6,399,2394
+1538,2026-08-30,Customer 007,Tea Sampler,Food,Gurugram,3,549,1647
+1539,2026-08-30,Customer 005,Brass Diya Set,Decor,Delhi,3,899,2697
+1540,2026-08-31,Customer 002,Brass Diya Set,Decor,Faridabad,6,899,5394
+1541,2026-08-31,Customer 028,Festive Hamper,Hampers,Noida,12,2499,29988
+1542,2026-08-31,Customer 020,Custom Mug,Merch,Faridabad,1,399,399
+1543,2026-09-01,Customer 027,Festive Hamper,Hampers,Noida,18,2499,44982
+1544,2026-09-01,Customer 057,Festive Hamper,Hampers,Delhi,12,2499,29988
+1545,2026-09-01,Customer 050,Leather Diary,Stationery,Faridabad,6,749,4494
+1546,2026-09-01,Customer 059,Festive Hamper,Hampers,Gurugram,6,2499,14994
+1547,2026-09-01,Customer 051,Festive Hamper,Hampers,Gurugram,19,2499,47481
+1548,2026-09-02,Customer 029,Brass Diya Set,Decor,Gurugram,5,899,4495
+1549,2026-09-02,Customer 041,Custom Mug,Merch,Delhi,1,399,399
+1550,2026-09-02,Customer 032,Brass Diya Set,Decor,Faridabad,6,899,5394
+1551,2026-09-03,Customer 044,Dry Fruit Box,Food,Faridabad,1,1299,1299
+1552,2026-09-03,Customer 056,Festive Hamper,Hampers,Noida,6,2499,14994
+1553,2026-09-03,Customer 015,Dry Fruit Box,Food,Delhi,1,1299,1299
+1554,2026-09-03,Customer 024,Brass Diya Set,Decor,Delhi,7,899,6293
+1555,2026-09-03,Customer 018,Tea Sampler,Food,Gurugram,8,549,4392
+1556,2026-09-03,Customer 007,Festive Hamper,Hampers,Gurugram,15,2499,37485
+1557,2026-09-03,Customer 049,Desk Organizer,Stationery,Noida,2,999,1998
+1558,2026-09-04,Customer 018,Scented Candle Trio,Decor,Delhi,7,649,4543
+1559,2026-09-04,Customer 009,Desk Organizer,Stationery,Noida,8,999,7992
+1560,2026-09-04,Customer 012,Desk Organizer,Stationery,Noida,5,999,4995
+1561,2026-09-04,Customer 015,Brass Diya Set,Decor,Gurugram,5,899,4495
+1562,2026-09-04,Customer 060,Dry Fruit Box,Food,Noida,5,1299,6495
+1563,2026-09-05,Customer 019,Brass Diya Set,Decor,Faridabad,5,899,4495
+1564,2026-09-05,Customer 028,Festive Hamper,Hampers,Delhi,15,2499,37485
+1565,2026-09-05,Customer 053,Custom Mug,Merch,Delhi,8,399,3192
+1566,2026-09-05,Customer 012,Dry Fruit Box,Food,Noida,1,1299,1299
+1567,2026-09-05,Customer 019,Brass Diya Set,Decor,Gurugram,1,899,899
+1568,2026-09-05,Customer 048,Festive Hamper,Hampers,Gurugram,2,2499,4998
+1569,2026-09-06,Customer 041,Custom Mug,Merch,Delhi,6,399,2394
+1570,2026-09-06,Customer 025,Festive Hamper,Hampers,Delhi,7,2499,17493
+1571,2026-09-07,Customer 050,Leather Diary,Stationery,Noida,2,749,1498
+1572,2026-09-07,Customer 008,Leather Diary,Stationery,Faridabad,7,749,5243
+1573,2026-09-07,Customer 017,Scented Candle Trio,Decor,Faridabad,7,649,4543
+1574,2026-09-07,Customer 040,Leather Diary,Stationery,Faridabad,3,749,2247
+1575,2026-09-07,Customer 013,Brass Diya Set,Decor,Gurugram,5,899,4495
+1576,2026-09-08,Customer 046,Scented Candle Trio,Decor,Delhi,3,649,1947
+1577,2026-09-08,Customer 046,Custom Mug,Merch,Gurugram,8,399,3192
+1578,2026-09-08,Customer 007,Brass Diya Set,Decor,Gurugram,4,899,3596
+1579,2026-09-08,Customer 014,Brass Diya Set,Decor,Noida,2,899,1798
+1580,2026-09-08,Customer 037,Desk Organizer,Stationery,Delhi,5,999,4995
+1581,2026-09-09,Customer 052,Custom Mug,Merch,Gurugram,1,399,399
+1582,2026-09-09,Customer 050,Dry Fruit Box,Food,Faridabad,2,1299,2598
+1583,2026-09-10,Customer 032,Dry Fruit Box,Food,Noida,7,1299,9093
+1584,2026-09-10,Customer 004,Brass Diya Set,Decor,Faridabad,5,899,4495
+1585,2026-09-10,Customer 048,Dry Fruit Box,Food,Gurugram,8,1299,10392
+1586,2026-09-10,Customer 024,Dry Fruit Box,Food,Gurugram,8,1299,10392
+1587,2026-09-11,Customer 026,Leather Diary,Stationery,Noida,1,749,749
+1588,2026-09-11,Customer 007,Custom Mug,Merch,Delhi,3,399,1197
+1589,2026-09-11,Customer 006,Festive Hamper,Hampers,Noida,1,2499,2499
+1590,2026-09-11,Customer 017,Festive Hamper,Hampers,Gurugram,3,2499,7497
+1591,2026-09-12,Customer 023,Festive Hamper,Hampers,Gurugram,2,2499,4998
+1592,2026-09-12,Customer 029,Festive Hamper,Hampers,Noida,2,2499,4998
+1593,2026-09-12,Customer 033,Brass Diya Set,Decor,Gurugram,7,899,6293
+1594,2026-09-12,Customer 009,Festive Hamper,Hampers,Faridabad,3,2499,7497
+1595,2026-09-12,Customer 036,Dry Fruit Box,Food,Noida,7,1299,9093
+1596,2026-09-12,Customer 039,Desk Organizer,Stationery,Delhi,5,999,4995
+1597,2026-09-13,Customer 059,Brass Diya Set,Decor,Faridabad,3,899,2697
+1598,2026-09-13,Customer 024,Festive Hamper,Hampers,Noida,13,2499,32487
+1599,2026-09-13,Customer 047,Leather Diary,Stationery,Noida,6,749,4494
+1600,2026-09-13,Customer 021,Dry Fruit Box,Food,Noida,6,1299,7794
+1601,2026-09-13,Customer 004,Festive Hamper,Hampers,Gurugram,13,2499,32487
+1602,2026-09-13,Customer 043,Desk Organizer,Stationery,Gurugram,4,999,3996
+1603,2026-09-14,Customer 015,Custom Mug,Merch,Delhi,2,399,798
+1604,2026-09-14,Customer 010,Leather Diary,Stationery,Faridabad,4,749,2996
+1605,2026-09-14,Customer 002,Dry Fruit Box,Food,Gurugram,2,1299,2598
+1606,2026-09-14,Customer 030,Brass Diya Set,Decor,Noida,3,899,2697
+1607,2026-09-15,Customer 039,Festive Hamper,Hampers,Noida,7,2499,17493
+1608,2026-09-15,Customer 024,Festive Hamper,Hampers,Noida,8,2499,19992
+1609,2026-09-15,Customer 056,Tea Sampler,Food,Delhi,4,549,2196
+1610,2026-09-16,Customer 022,Festive Hamper,Hampers,Noida,6,2499,14994
+1611,2026-09-16,Customer 011,Desk Organizer,Stationery,Faridabad,4,999,3996
+1612,2026-09-17,Customer 043,Festive Hamper,Hampers,Noida,9,2499,22491
+1613,2026-09-17,Customer 033,Brass Diya Set,Decor,Faridabad,7,899,6293
+1614,2026-09-17,Customer 057,Brass Diya Set,Decor,Delhi,6,899,5394
+1615,2026-09-17,Customer 033,Scented Candle Trio,Decor,Delhi,2,649,1298
+1616,2026-09-17,Customer 008,Scented Candle Trio,Decor,Delhi,1,649,649
+1617,2026-09-17,Customer 010,Custom Mug,Merch,Faridabad,1,399,399
+1618,2026-09-18,Customer 043,Brass Diya Set,Decor,Noida,1,899,899
+1619,2026-09-18,Customer 003,Scented Candle Trio,Decor,Gurugram,8,649,5192
+1620,2026-09-18,Customer 007,Custom Mug,Merch,Gurugram,3,399,1197
+1621,2026-09-19,Customer 037,Custom Mug,Merch,Noida,6,399,2394
+1622,2026-09-19,Customer 041,Festive Hamper,Hampers,Delhi,6,2499,14994
+1623,2026-09-19,Customer 005,Festive Hamper,Hampers,Gurugram,1,2499,2499
+1624,2026-09-19,Customer 026,Festive Hamper,Hampers,Delhi,7,2499,17493
+1625,2026-09-19,Customer 056,Festive Hamper,Hampers,Gurugram,7,2499,17493
+1626,2026-09-19,Customer 037,Custom Mug,Merch,Gurugram,2,399,798
+1627,2026-09-19,Customer 053,Festive Hamper,Hampers,Noida,11,2499,27489
+1628,2026-09-20,Customer 012,Custom Mug,Merch,Noida,6,399,2394
+1629,2026-09-20,Customer 049,Desk Organizer,Stationery,Noida,6,999,5994
+1630,2026-09-20,Customer 007,Brass Diya Set,Decor,Delhi,8,899,7192
+1631,2026-09-20,Customer 056,Festive Hamper,Hampers,Gurugram,6,2499,14994
+1632,2026-09-20,Customer 048,Scented Candle Trio,Decor,Delhi,6,649,3894
+1633,2026-09-20,Customer 030,Festive Hamper,Hampers,Delhi,15,2499,37485
+1634,2026-09-21,Customer 019,Tea Sampler,Food,Gurugram,1,549,549
+1635,2026-09-21,Customer 044,Tea Sampler,Food,Faridabad,1,549,549
+1636,2026-09-22,Customer 018,Tea Sampler,Food,Delhi,8,549,4392
+1637,2026-09-22,Customer 054,Dry Fruit Box,Food,Faridabad,5,1299,6495
+1638,2026-09-22,Customer 006,Festive Hamper,Hampers,Delhi,20,2499,49980
+1639,2026-09-22,Customer 046,Custom Mug,Merch,Delhi,5,399,1995
+1640,2026-09-22,Customer 041,Festive Hamper,Hampers,Gurugram,5,2499,12495
+1641,2026-09-22,Customer 055,Custom Mug,Merch,Gurugram,2,399,798
+1642,2026-09-23,Customer 031,Scented Candle Trio,Decor,Faridabad,8,649,5192
+1643,2026-09-23,Customer 042,Scented Candle Trio,Decor,Delhi,7,649,4543
+1644,2026-09-23,Customer 047,Festive Hamper,Hampers,Faridabad,11,2499,27489
+1645,2026-09-23,Customer 002,Dry Fruit Box,Food,Gurugram,6,1299,7794
+1646,2026-09-23,Customer 004,Leather Diary,Stationery,Gurugram,1,749,749
+1647,2026-09-23,Customer 052,Festive Hamper,Hampers,Noida,10,2499,24990
+1648,2026-09-24,Customer 003,Brass Diya Set,Decor,Gurugram,3,899,2697
+1649,2026-09-24,Customer 023,Desk Organizer,Stationery,Gurugram,8,999,7992
+1650,2026-09-24,Customer 027,Festive Hamper,Hampers,Faridabad,11,2499,27489
+1651,2026-09-24,Customer 039,Brass Diya Set,Decor,Gurugram,5,899,4495
+1652,2026-09-24,Customer 005,Dry Fruit Box,Food,Gurugram,4,1299,5196
+1653,2026-09-25,Customer 025,Festive Hamper,Hampers,Gurugram,20,2499,49980
+1654,2026-09-25,Customer 032,Festive Hamper,Hampers,Faridabad,4,2499,9996
+1655,2026-09-25,Customer 037,Festive Hamper,Hampers,Delhi,3,2499,7497
+1656,2026-09-25,Customer 042,Festive Hamper,Hampers,Delhi,9,2499,22491
+1657,2026-09-25,Customer 007,Festive Hamper,Hampers,Delhi,19,2499,47481
+1658,2026-09-25,Customer 055,Dry Fruit Box,Food,Noida,8,1299,10392
+1659,2026-09-25,Customer 047,Festive Hamper,Hampers,Delhi,10,2499,24990
+1660,2026-09-26,Customer 056,Custom Mug,Merch,Gurugram,1,399,399
+1661,2026-09-26,Customer 050,Scented Candle Trio,Decor,Noida,2,649,1298
+1662,2026-09-26,Customer 010,Festive Hamper,Hampers,Noida,20,2499,49980
+1663,2026-09-26,Customer 022,Scented Candle Trio,Decor,Noida,1,649,649
+1664,2026-09-26,Customer 001,Scented Candle Trio,Decor,Gurugram,8,649,5192
+1665,2026-09-26,Customer 018,Tea Sampler,Food,Noida,1,549,549
+1666,2026-09-26,Customer 034,Festive Hamper,Hampers,Delhi,5,2499,12495
+1667,2026-09-27,Customer 005,Festive Hamper,Hampers,Noida,5,2499,12495
+1668,2026-09-27,Customer 037,Leather Diary,Stationery,Noida,2,749,1498
+1669,2026-09-27,Customer 038,Leather Diary,Stationery,Gurugram,4,749,2996
+1670,2026-09-27,Customer 028,Festive Hamper,Hampers,Gurugram,16,2499,39984
+1671,2026-09-27,Customer 017,Dry Fruit Box,Food,Delhi,2,1299,2598
+1672,2026-09-27,Customer 016,Custom Mug,Merch,Faridabad,8,399,3192
+1673,2026-09-28,Customer 007,Desk Organizer,Stationery,Delhi,6,999,5994
+1674,2026-09-28,Customer 033,Brass Diya Set,Decor,Delhi,3,899,2697
+1675,2026-09-28,Customer 048,Custom Mug,Merch,Gurugram,2,399,798
+1676,2026-09-28,Customer 016,Dry Fruit Box,Food,Faridabad,7,1299,9093
+1677,2026-09-28,Customer 054,Custom Mug,Merch,Delhi,1,399,399
+1678,2026-09-28,Customer 056,Custom Mug,Merch,Delhi,7,399,2793
+1679,2026-09-29,Customer 044,Festive Hamper,Hampers,Delhi,10,2499,24990
+1680,2026-09-29,Customer 020,Desk Organizer,Stationery,Faridabad,1,999,999
+1681,2026-09-29,Customer 001,Festive Hamper,Hampers,Gurugram,13,2499,32487
+1682,2026-09-30,Customer 035,Tea Sampler,Food,Noida,4,549,2196
+1683,2026-09-30,Customer 005,Festive Hamper,Hampers,Delhi,8,2499,19992
+1684,2026-09-30,Customer 033,Leather Diary,Stationery,Noida,1,749,749
+1685,2026-09-30,Customer 037,Brass Diya Set,Decor,Noida,7,899,6293
+1686,2026-09-30,Customer 021,Scented Candle Trio,Decor,Gurugram,2,649,1298
+1687,2026-10-01,Customer 030,Dry Fruit Box,Food,Faridabad,4,1299,5196
+1688,2026-10-01,Customer 010,Scented Candle Trio,Decor,Delhi,1,649,649
+1689,2026-10-01,Customer 003,Festive Hamper,Hampers,Noida,6,2499,14994
+1690,2026-10-01,Customer 015,Leather Diary,Stationery,Noida,4,749,2996
+1691,2026-10-01,Customer 014,Brass Diya Set,Decor,Noida,4,899,3596
+1692,2026-10-01,Customer 019,Scented Candle Trio,Decor,Faridabad,2,649,1298
+1693,2026-10-02,Customer 047,Tea Sampler,Food,Faridabad,8,549,4392
+1694,2026-10-02,Customer 026,Festive Hamper,Hampers,Delhi,19,2499,47481
+1695,2026-10-02,Customer 037,Scented Candle Trio,Decor,Delhi,4,649,2596
+1696,2026-10-02,Customer 007,Tea Sampler,Food,Noida,8,549,4392
+1697,2026-10-02,Customer 003,Desk Organizer,Stationery,Noida,4,999,3996
+1698,2026-10-02,Customer 042,Leather Diary,Stationery,Noida,5,749,3745
+1699,2026-10-02,Customer 047,Dry Fruit Box,Food,Delhi,5,1299,6495
+1700,2026-10-03,Customer 011,Leather Diary,Stationery,Faridabad,5,749,3745
+1701,2026-10-03,Customer 057,Scented Candle Trio,Decor,Faridabad,7,649,4543
+1702,2026-10-03,Customer 025,Dry Fruit Box,Food,Gurugram,5,1299,6495
+1703,2026-10-04,Customer 013,Brass Diya Set,Decor,Gurugram,7,899,6293
+1704,2026-10-04,Customer 054,Brass Diya Set,Decor,Gurugram,4,899,3596
+1705,2026-10-04,Customer 007,Tea Sampler,Food,Noida,4,549,2196
+1706,2026-10-04,Customer 042,Festive Hamper,Hampers,Delhi,19,2499,47481
+1707,2026-10-04,Customer 025,Festive Hamper,Hampers,Gurugram,9,2499,22491
+1708,2026-10-05,Customer 020,Scented Candle Trio,Decor,Noida,4,649,2596
+1709,2026-10-05,Customer 030,Brass Diya Set,Decor,Faridabad,3,899,2697
+1710,2026-10-05,Customer 001,Desk Organizer,Stationery,Gurugram,1,999,999
+1711,2026-10-05,Customer 026,Leather Diary,Stationery,Faridabad,2,749,1498
+1712,2026-10-05,Customer 054,Dry Fruit Box,Food,Faridabad,3,1299,3897
+1713,2026-10-05,Customer 057,Desk Organizer,Stationery,Faridabad,1,999,999
+1714,2026-10-06,Customer 005,Festive Hamper,Hampers,Noida,15,2499,37485
+1715,2026-10-06,Customer 025,Festive Hamper,Hampers,Noida,5,2499,12495
+1716,2026-10-06,Customer 022,Brass Diya Set,Decor,Delhi,6,899,5394
+1717,2026-10-07,Customer 014,Leather Diary,Stationery,Delhi,1,749,749
+1718,2026-10-07,Customer 011,Scented Candle Trio,Decor,Gurugram,7,649,4543
+1719,2026-10-07,Customer 012,Desk Organizer,Stationery,Gurugram,7,999,6993
+1720,2026-10-07,Customer 001,Custom Mug,Merch,Delhi,4,399,1596
+1721,2026-10-08,Customer 012,Custom Mug,Merch,Gurugram,2,399,798
+1722,2026-10-08,Customer 006,Tea Sampler,Food,Noida,8,549,4392
+1723,2026-10-08,Customer 040,Custom Mug,Merch,Delhi,6,399,2394
+1724,2026-10-08,Customer 009,Desk Organizer,Stationery,Delhi,8,999,7992
+1725,2026-10-08,Customer 044,Festive Hamper,Hampers,Gurugram,6,2499,14994
+1726,2026-10-08,Customer 045,Festive Hamper,Hampers,Delhi,5,2499,12495
+1727,2026-10-08,Customer 023,Leather Diary,Stationery,Delhi,2,749,1498
+1728,2026-10-09,Customer 054,Brass Diya Set,Decor,Gurugram,6,899,5394
+1729,2026-10-09,Customer 009,Custom Mug,Merch,Faridabad,1,399,399
+1730,2026-10-09,Customer 052,Custom Mug,Merch,Noida,8,399,3192
+1731,2026-10-09,Customer 044,Festive Hamper,Hampers,Noida,7,2499,17493
+1732,2026-10-10,Customer 051,Festive Hamper,Hampers,Faridabad,9,2499,22491
+1733,2026-10-10,Customer 036,Custom Mug,Merch,Gurugram,3,399,1197
+1734,2026-10-11,Customer 048,Festive Hamper,Hampers,Gurugram,6,2499,14994
+1735,2026-10-11,Customer 029,Dry Fruit Box,Food,Noida,1,1299,1299
+1736,2026-10-11,Customer 021,Desk Organizer,Stationery,Delhi,5,999,4995
+1737,2026-10-11,Customer 030,Custom Mug,Merch,Noida,3,399,1197
+1738,2026-10-11,Customer 023,Festive Hamper,Hampers,Gurugram,19,2499,47481
+1739,2026-10-12,Customer 038,Tea Sampler,Food,Delhi,2,549,1098
+1740,2026-10-12,Customer 053,Brass Diya Set,Decor,Gurugram,2,899,1798
+1741,2026-10-12,Customer 058,Festive Hamper,Hampers,Faridabad,12,2499,29988
+1742,2026-10-13,Customer 002,Leather Diary,Stationery,Faridabad,7,749,5243
+1743,2026-10-13,Customer 046,Custom Mug,Merch,Gurugram,3,399,1197
+1744,2026-10-13,Customer 021,Scented Candle Trio,Decor,Gurugram,2,649,1298
+1745,2026-10-14,Customer 044,Festive Hamper,Hampers,Faridabad,4,2499,9996
+1746,2026-10-14,Customer 013,Festive Hamper,Hampers,Faridabad,12,2499,29988
+1747,2026-10-14,Customer 040,Brass Diya Set,Decor,Noida,2,899,1798
+1748,2026-10-14,Customer 036,Festive Hamper,Hampers,Noida,9,2499,22491
+1749,2026-10-14,Customer 051,Custom Mug,Merch,Delhi,1,399,399
+1750,2026-10-14,Customer 029,Festive Hamper,Hampers,Noida,14,2499,34986
+1751,2026-10-14,Customer 057,Dry Fruit Box,Food,Faridabad,7,1299,9093
