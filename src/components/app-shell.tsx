@@ -125,11 +125,14 @@ export function AppShell({
             {role} · {orgName}
           </p>
         </div>
-        <button type="button" onClick={logout} className="rounded-md p-1.5 text-muted-foreground hover:bg-muted" aria-label="Sign out" title="Sign out">
-          <LogOut className="size-4" />
-        </button>
+        {authMode !== "none" && (
+          <button type="button" onClick={logout} className="rounded-md p-1.5 text-muted-foreground hover:bg-muted" aria-label="Sign out" title="Sign out">
+            <LogOut className="size-4" />
+          </button>
+        )}
       </div>
       {authMode === "local" && <p className="px-2 pt-1 text-[11px] text-muted-foreground">Local auth mode (development)</p>}
+      {authMode === "none" && <p className="px-2 pt-1 text-[11px] text-muted-foreground">Standalone mode: no sign-in, data stays on this computer</p>}
     </div>
   );
 

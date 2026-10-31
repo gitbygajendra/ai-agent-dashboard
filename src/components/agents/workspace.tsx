@@ -38,7 +38,7 @@ function Progress({ execution }: { execution: ExecutionDetail }) {
   const failed = ["failed", "timed_out", "cancelled"].includes(execution.status);
   const steps = [
     { label: "Request validated", done: true },
-    { label: "Sent to n8n", done: execution.status !== "queued" },
+    { label: "Pipeline started", done: execution.status !== "queued" },
     { label: "Workflow running", done: final, active: execution.status === "running" },
     { label: failed ? "Stopped" : execution.status === "awaiting_approval" ? "Waiting for your approval" : "Results saved", done: final, failed },
   ];

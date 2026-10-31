@@ -10,6 +10,7 @@ import { getExecution, listExecutions } from "@/lib/agents/executions";
 import { AGENTS, INTEGRATIONS, isAgentSlug } from "@/lib/agents/registry";
 import { getAgentStatuses } from "@/lib/agents/status";
 import { env } from "@/lib/env";
+import { WORKFLOW_LOGIC } from "@/lib/agents/logic";
 
 export async function generateMetadata({ params }: PageProps<"/agents/[slug]">) {
   const { slug } = await params;
@@ -78,14 +79,25 @@ export default async function AgentPage({ params, searchParams }: PageProps<"/ag
             <dl className="grid grid-cols-[140px_1fr] gap-x-3 gap-y-2">
               <dt className="text-muted-foreground">Agent</dt>
               <dd>{status.enabled ? "Enabled" : "Turned off"}</dd>
-              <dt className="text-muted-foreground">n8n workflow</dt>
+              <dt className="text-muted-foreground">{e.ENGINE === "builtin" ? "Engine" : "n8n workflow"}</dt>
               <dd className="break-all">
-                <code className="text-xs">n8n/agent-dashboard-master.json</code>
+                {e.ENGINE === "builtin" ? "Built-in (runs inside this app)" : <code className="text-xs">n8n/agent-dashboard-master.json</code>}
                 <span className="block text-xs text-muted-foreground">{status.connectionDetail}</span>
               </dd>
               <dt className="text-muted-foreground">AI model</dt>
               <dd>{e.AI_ENABLED === "true" ? <code className="text-xs">{e.AI_MODEL}</code> : "Off (computed results only)"}</dd>
             </dl>
+            <div>
+              <p className="mb-2 text-xs font-medium text-muted-foreground">How a run works, step by step</p>
+              <ol className="space-y-1">
+                {["validate input", ...WORKFLOW_LOGIC[slug].stageNames, "build AI prompt", "AI writes the text (optional)", "save results"].map((step, i) => (
+                  <li key={step} className="flex items-center gap-2 text-xs">
+                    <span className="inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-muted font-medium">{i + 1}</span>
+                    <span className="capitalize">{step}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
             {isAdmin(ctx) && (
               <p className="text-xs text-muted-foreground">
                 Turn agents on or off and set automation rules in <Link className="text-primary hover:underline" href="/settings">Settings</Link>.

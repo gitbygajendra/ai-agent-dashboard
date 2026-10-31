@@ -1,4 +1,5 @@
 import "server-only";
+import { env } from "../../env";
 import type { OrgContext } from "../../auth/context";
 import { logger } from "../../logger";
 import type { CrmEventInput, CrmEventResult } from "../logic/crm";
@@ -46,7 +47,7 @@ export const crmHandler: AgentHandler = {
 export async function triggerCrmEvent(ctx: OrgContext, eventInput: CrmEventInput, entityId: string) {
   try {
     const { n8nConfig, startExecution } = await import("../executions");
-    if (!isConfigured("crm-automation-agent", n8nConfig())) return;
+    if (env().ENGINE === "n8n" && !isConfigured("crm-automation-agent", n8nConfig())) return;
     await startExecution(ctx, "crm-automation-agent", {
       input: { ...eventInput, sender_name: ctx.fullName },
       inputSummary: { event: eventInput.event, entity_id: entityId, name: eventInput.deal?.title ?? eventInput.contact?.name ?? null },

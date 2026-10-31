@@ -1,4 +1,5 @@
 import "server-only";
+import { env } from "../env";
 import type { OrgContext } from "../auth/context";
 import { withUser } from "../db";
 import { getIntegrationStatuses, type IntegrationStatus } from "../integrations/status";
@@ -34,7 +35,7 @@ export async function getAgentStatuses(ctx: OrgContext): Promise<{ agents: Agent
     const wf = workflows.find((w) => w.slug === slug)!;
     const enabled = row?.enabled ?? true;
     let connection: AgentRuntimeStatus["connection"] = "connected";
-    let detail = "Runs through the master n8n workflow.";
+    let detail = env().ENGINE === "builtin" ? "Runs on the built-in engine." : "Runs through the master n8n workflow.";
     let blocked: string | null = null;
     if (!wf.configured) {
       connection = "not_connected";

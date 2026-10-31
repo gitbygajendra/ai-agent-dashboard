@@ -58,12 +58,14 @@ export async function getIntegrationStatuses(ctx: OrgContext): Promise<{
   const workflows = AGENT_SLUGS.map((slug) => {
     const last = lastErrors.find((l) => l.agent_slug === slug);
     const configError = last && last.status === "failed" && last.error_code && CONFIG_ERRORS.includes(last.error_code);
-    return { slug, configured: isConfigured(slug, cfg), lastError: configError ? last!.error_message : null, lastErrorCode: configError ? last!.error_code : null };
+    return { slug, configured: e.ENGINE === "builtin" || isConfigured(slug, cfg), lastError: configError ? last!.error_message : null, lastErrorCode: configError ? last!.error_code : null };
   });
 
   // n8n: configured in env + reachable + no recent auth/workflow errors
   let n8n: IntegrationStatus;
-  if (!e.N8N_BASE_URL && !Object.values(cfg.webhookUrls).some(Boolean)) {
+  if (e.ENGINE === "builtin") {
+    n8n = { provider: "n8n", state: "connected", detail: "Not needed: agents run on the built-in engine inside this app (same pipeline as the n8n workflow). Set N8N_BASE_URL to use n8n instead.", account: "built-in engine", lastCheckedAt: null, canConnect: false };
+  } else if (!e.N8N_BASE_URL && !Object.values(cfg.webhookUrls).some(Boolean)) {
     n8n = { provider: "n8n", state: "not_connected", detail: "N8N_BASE_URL is not set.", account: null, lastCheckedAt: null, canConnect: false };
   } else if (!e.N8N_WEBHOOK_SECRET) {
     n8n = { provider: "n8n", state: "needs_attention", detail: "N8N_WEBHOOK_SECRET is not set; webhooks can't be authenticated.", account: e.N8N_BASE_URL ?? null, lastCheckedAt: null, canConnect: false };
@@ -82,14 +84,17 @@ export async function getIntegrationStatuses(ctx: OrgContext): Promise<{
 
   // AI model: credential lives in n8n, so infer from the most recent run that tried to use it.
   const lastAi = aiRuns[0];
+  const builtinKey = e.AI_PROVIDER === "groq" ? e.GROQ_API_KEY : e.ANTHROPIC_API_KEY;
   const llm: IntegrationStatus =
     e.AI_ENABLED !== "true"
       ? { provider: "llm", state: "not_connected", detail: "AI_ENABLED=false: agents return computed results only.", account: e.AI_MODEL, lastCheckedAt: null, canConnect: false }
+      : e.ENGINE === "builtin" && !builtinKey
+        ? { provider: "llm", state: "not_connected", detail: "Optional. Add GROQ_API_KEY=... (free at console.groq.com/keys) or ANTHROPIC_API_KEY=... to .env.local and restart for AI-written text. Agents work without it.", account: null, lastCheckedAt: null, canConnect: false }
       : !lastAi
         ? { provider: "llm", state: "not_connected", detail: `Model ${e.AI_MODEL}. Not verified yet: give n8n the API key (GROQ_API_KEY / ANTHROPIC_API_KEY, or the "AI API Key" credential on n8n Cloud) and run an agent.`, account: e.AI_MODEL, lastCheckedAt: null, canConnect: false }
         : lastAi.ai_status === "used"
           ? { provider: "llm", state: "connected", detail: `Model ${e.AI_MODEL}. Last AI step succeeded.`, account: e.AI_MODEL, lastCheckedAt: lastAi.created_at, canConnect: false }
-          : { provider: "llm", state: "needs_attention", detail: "The last AI step failed (missing/invalid credential in n8n, or a refusal). Results fell back to computed summaries.", account: e.AI_MODEL, lastCheckedAt: lastAi.created_at, canConnect: false };
+          : { provider: "llm", state: "needs_attention", detail: e.ENGINE === "builtin" ? `The last AI step failed (invalid ${e.AI_PROVIDER === "groq" ? "GROQ_API_KEY" : "ANTHROPIC_API_KEY"} in .env.local, no internet, or a refusal). Results fell back to computed summaries.` : "The last AI step failed (missing/invalid credential in n8n, or a refusal). Results fell back to computed summaries.", account: e.AI_MODEL, lastCheckedAt: lastAi.created_at, canConnect: false };
 
   const g = row("gmail");
   const gmail: IntegrationStatus = !gmailConfigured()

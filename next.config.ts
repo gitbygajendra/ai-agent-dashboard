@@ -5,7 +5,7 @@ import type { NextConfig } from "next";
 // layer simple: there is no shared, cacheable content in this app.
 const nextConfig: NextConfig = {
   cacheComponents: false,
-  serverExternalPackages: ["pg", "exceljs"],
+  serverExternalPackages: ["pg", "exceljs", "@electric-sql/pglite"],
   poweredByHeader: false,
   turbopack: {
     rules: {

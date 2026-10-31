@@ -42,7 +42,11 @@ export default async function SettingsPage() {
   const state = (p: string) => integrations.find((i) => i.provider === p)?.state;
   const e = env();
 
-  const checklist = [
+  const checklist = e.ENGINE === "builtin" && e.AUTH_MODE === "none" ? [
+    { done: true, label: "Standalone mode: embedded database in .data/db, built-in agent engine, no sign-in", note: "Nothing else to install. Set DATABASE_URL / N8N_BASE_URL in .env.local to switch to Postgres and n8n." },
+    { done: state("llm") === "connected", label: "AI key in .env.local (GROQ_API_KEY or ANTHROPIC_API_KEY), verified by a successful AI step", note: "Optional: without it agents return computed results." },
+    { done: state("gmail") === "connected", label: "Gmail connected (Google OAuth client + ENCRYPTION_KEY, optional)" },
+  ] : [
     { done: e.AUTH_MODE === "supabase", label: "Supabase project created, migrations applied, Supabase Auth configured", note: e.AUTH_MODE === "local" ? "Running with local development auth." : undefined },
     { done: Boolean(e.SUPABASE_SERVICE_ROLE_KEY), label: "Private storage bucket available (Supabase Storage)", note: !e.SUPABASE_SERVICE_ROLE_KEY ? "Files are stored on the local disk." : undefined },
     { done: state("n8n") === "connected", label: "n8n reachable with N8N_BASE_URL and N8N_WEBHOOK_SECRET" },

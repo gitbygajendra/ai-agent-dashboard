@@ -1,6 +1,10 @@
 import "server-only";
-import { Pool, type PoolClient, type QueryResultRow } from "pg";
+import { mkdir } from "node:fs/promises";
+import path from "node:path";
+import type { PGlite } from "@electric-sql/pglite";
+import { Pool, type QueryResultRow } from "pg";
 import { env } from "./env";
+import { applyMigrations } from "./migrate";
 
 /**
  * Database access.
@@ -16,8 +20,32 @@ import { env } from "./env";
  *
  * With Supabase, point DATABASE_URL at the transaction pooler (port 6543).
  * `set local` is transaction-scoped, so it is safe with transaction pooling.
+ *
+ * Without DATABASE_URL the app uses PGlite: real Postgres compiled to
+ * WebAssembly, running inside this process with its data in .data/db. Same
+ * SQL, same RLS policies; migrations are applied on first use.
  */
-const globalForPool = globalThis as unknown as { __agentDashPool?: Pool };
+const globalForPool = globalThis as unknown as { __agentDashPool?: Pool; __agentDashPglite?: Promise<PGlite> };
+
+function embedded(): Promise<PGlite> {
+  globalForPool.__agentDashPglite ??= (async () => {
+    const { PGlite } = await import("@electric-sql/pglite");
+    const { pgcrypto } = await import("@electric-sql/pglite/contrib/pgcrypto");
+    const dataDir = path.resolve(/*turbopackIgnore: true*/ process.cwd(), ".data", "db");
+    await mkdir(dataDir, { recursive: true });
+    const db = await PGlite.create({ dataDir, extensions: { pgcrypto } });
+    const fresh = !(await db.query<{ t: string | null }>("select to_regclass('public._app_migrations')::text as t")).rows[0]?.t;
+    await applyMigrations((sql, params) => (params?.length ? db.query(sql, params) : db.exec(sql).then((r) => r[r.length - 1] ?? { rows: [] })) as never, {
+      supabaseDir: path.resolve(/*turbopackIgnore: true*/ process.cwd(), "supabase"),
+      local: fresh,
+    });
+    return db;
+  })().catch((err) => {
+    globalForPool.__agentDashPglite = undefined;
+    throw err;
+  });
+  return globalForPool.__agentDashPglite;
+}
 
 function pool(): Pool {
   if (!globalForPool.__agentDashPool) {
@@ -37,12 +65,14 @@ export type Tx = {
   one<R extends QueryResultRow = QueryResultRow>(sql: string, params?: unknown[]): Promise<R | null>;
 };
 
-function wrap(client: PoolClient): Tx {
+type Queryable = { query<R>(sql: string, params?: unknown[]): Promise<{ rows: R[] }> };
+
+function wrap(client: Queryable): Tx {
   // A transaction is one connection: queue queries so callers can still use
   // Promise.all without overlapping client.query() calls.
   let queue: Promise<unknown> = Promise.resolve();
   function run<R extends QueryResultRow>(sql: string, params?: unknown[]) {
-    const next = queue.then(() => client.query<R>(sql, params));
+    const next = queue.then(() => client.query<R>(sql, params as unknown[]));
     queue = next.catch(() => undefined);
     return next;
   }
@@ -56,7 +86,15 @@ function wrap(client: PoolClient): Tx {
   };
 }
 
-async function inTransaction<T>(setup: (c: PoolClient) => Promise<void>, fn: (tx: Tx) => Promise<T>): Promise<T> {
+async function inTransaction<T>(setup: (c: Queryable) => Promise<void>, fn: (tx: Tx) => Promise<T>): Promise<T> {
+  if (!env().DATABASE_URL) {
+    // PGlite runs one transaction at a time; its transaction() queues the rest.
+    const db = await embedded();
+    return db.transaction(async (t) => {
+      await setup(t as unknown as Queryable);
+      return fn(wrap(t as unknown as Queryable));
+    });
+  }
   const client = await pool().connect();
   try {
     await client.query("begin");
@@ -90,7 +128,8 @@ export function withService<T>(fn: (tx: Tx) => Promise<T>): Promise<T> {
 /** Lightweight connectivity check for the health endpoint. */
 export async function pingDatabase(): Promise<boolean> {
   try {
-    await pool().query("select 1");
+    if (!env().DATABASE_URL) await (await embedded()).query("select 1");
+    else await pool().query("select 1");
     return true;
   } catch {
     return false;

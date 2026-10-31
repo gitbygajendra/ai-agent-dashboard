@@ -36,7 +36,7 @@ export default async function IntegrationsPage({ searchParams }: PageProps<"/int
     <div className="space-y-6">
       <PageHeader
         title="Integrations"
-        description="Connections the agents use. Secrets stay on the server or in n8n; this page shows status only."
+        description="Connections the agents use. Secrets stay on the server (or in n8n); this page shows status only."
       />
       {gmailMsg && <Alert tone={gmailMsg.tone}>{gmailMsg.text}</Alert>}
 
@@ -77,7 +77,7 @@ export default async function IntegrationsPage({ searchParams }: PageProps<"/int
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Bot className="size-4 text-muted-foreground" /> Agents in the n8n master workflow
+            <Bot className="size-4 text-muted-foreground" /> Agent pipelines
           </CardTitle>
           <CardDescription>
             All seven agents run through one workflow: import <code className="text-xs">n8n/agent-dashboard-master.json</code> into n8n and publish it. See the{" "}

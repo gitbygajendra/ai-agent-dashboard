@@ -14,13 +14,20 @@ function supabaseMode() {
   return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
 }
 
+// Mirrors env(): no DATABASE_URL means the embedded database and no sign-in.
+function noAuthMode() {
+  return process.env.AUTH_MODE === "none" || (!process.env.AUTH_MODE && !process.env.DATABASE_URL?.trim());
+}
+
 export async function proxy(request: NextRequest) {
   const path = request.nextUrl.pathname;
   const isPublic = PUBLIC.some((re) => re.test(path));
   let response = NextResponse.next({ request });
   let signedIn = false;
 
-  if (supabaseMode()) {
+  if (noAuthMode()) {
+    signedIn = true;
+  } else if (supabaseMode()) {
     const supabase = createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, {
       cookies: {
         getAll: () => request.cookies.getAll(),

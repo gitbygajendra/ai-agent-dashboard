@@ -140,14 +140,14 @@ export function isAgentSlug(value: string): value is AgentSlug {
 
 export const INTEGRATIONS: Record<IntegrationProvider, { name: string; description: string; setup: string }> = {
   n8n: {
-    name: "n8n",
-    description: "Workflow engine that runs every agent.",
-    setup: "Set N8N_BASE_URL and N8N_WEBHOOK_SECRET, then import and publish n8n/agent-dashboard-master.json (one workflow for all agents).",
+    name: "Workflow engine",
+    description: "Runs every agent's pipeline: built into the app by default, or n8n.",
+    setup: "Nothing to do for the built-in engine. To use n8n instead: set N8N_BASE_URL and N8N_WEBHOOK_SECRET, then import and publish n8n/agent-dashboard-master.json.",
   },
   llm: {
     name: "AI model (Anthropic Claude or Groq)",
     description: "Writes summaries, answers and drafts. Agents still return computed results without it.",
-    setup: "Give n8n the key: GROQ_API_KEY or ANTHROPIC_API_KEY in its environment (self-hosted, see scripts/start-n8n.ps1), or an \"AI API Key\" Header Auth credential on n8n Cloud. Set AI_PROVIDER to match. The key never reaches the dashboard.",
+    setup: "Add GROQ_API_KEY=... (free at console.groq.com/keys) or ANTHROPIC_API_KEY=... to .env.local and restart. With n8n, give the key to n8n instead (see n8n/README.md).",
   },
   gmail: {
     name: "Gmail",

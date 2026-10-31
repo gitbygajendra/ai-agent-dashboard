@@ -1,4 +1,32 @@
-# Prompt for Claude (paste everything below the line into Claude Code on Harshit's Windows laptop)
+# Prompts for Claude Code on Harshit's laptop
+
+Two options. **Option A is recommended for the college demo**: nothing to install except Node.js. Option B is the full setup with PostgreSQL and n8n.
+
+## Option A: standalone (no database install, no n8n, no login)
+
+Paste this into Claude Code:
+
+---
+
+Get this project running on my laptop and prove it works. Run every command yourself, read errors and fix them; only ask me for things only I can do.
+
+1. Check `node -v` is 20 or newer and `git --version` works. If either is missing, tell me exactly what to install (nodejs.org LTS, git-scm.com) and wait.
+2. `git clone https://github.com/gitbygajendra/ai-agent-dashboard.git` into my home folder (no GitHub account needed), `cd` into it, read `README.md` section "Run it anywhere (no setup)".
+3. Do NOT create `.env.local` with DATABASE_URL or N8N_BASE_URL: without them the app runs in standalone mode (embedded PGlite database in `.data/db`, built-in agent engine, no sign-in).
+4. Ask me if I have a Groq API key (free at console.groq.com/keys). If yes, tell me to create `.env.local` containing one line `GROQ_API_KEY=gsk_...` myself; never ask me to paste the key into chat.
+5. `npm install`, then start `npm run dev` and keep it running. Check `http://localhost:3000/api/health` returns `{"ok":true,"database":"up"}`.
+6. Run all seven agents once through the API or the UI and confirm each result: Data Analytics with `public/samples/sample-sales.csv`, Finance Audit with `sample-transactions.csv` + `sample-invoices.csv`, Lead Generation with `sample-prospects.csv`, Email Automation with a pasted email, Customer Support with a question (add a knowledge article in Settings first so it can answer), Data-Driven Advisory with a question, and CRM Automation by creating a contact with status "lead" (it runs by itself and creates a follow-up task). Email and Lead Generation end in "Needs approval"; that is correct. If I gave a Groq key, confirm a run says the AI was used; otherwise results say "AI unavailable", which is fine.
+7. Run `npm test` and `npm run typecheck` and report the numbers.
+8. Delete the `.data` folder while the server is stopped to wipe test data, start `npm run dev` again, and confirm the dashboard shows zeros.
+9. Tell me in five lines how to start it again tomorrow and give me a 5-minute demo script (each agent page shows its pipeline steps under "How a run works, step by step").
+
+Rules: don't change the code to make things work without telling me why; don't put any key in chat or in git; don't push to GitHub.
+
+---
+
+## Option B: full setup (PostgreSQL + n8n workflow)
+
+Paste everything below the next line into Claude Code.
 
 ---
 

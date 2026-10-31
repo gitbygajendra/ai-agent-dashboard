@@ -8,6 +8,7 @@ import { env } from "../env";
 import { AppError, Errors } from "../errors";
 import { logger } from "../logger";
 import { invokeWorkflow, N8nError, type N8nConfig } from "../n8n/client";
+import { runPipeline, type CallAi } from "./engine";
 import type { AgentSlug } from "./registry";
 import { AGENTS } from "./registry";
 import { EXECUTION_COLUMNS, FINAL_STATUSES, type ExecutionRow, type HandlerMap, type PreparedRun } from "./types";
@@ -31,6 +32,19 @@ export function n8nConfig(): N8nConfig {
     },
   };
 }
+
+function aiKey() {
+  const e = env();
+  return e.AI_PROVIDER === "groq" ? e.GROQ_API_KEY : e.ANTHROPIC_API_KEY;
+}
+
+/** Built-in engine AI call: the key comes from .env.local (with n8n, n8n holds it). */
+const callAi: CallAi = async (url, headers, body) => {
+  const key = aiKey()!;
+  const auth: Record<string, string> = env().AI_PROVIDER === "groq" ? { Authorization: `Bearer ${key}` } : { "x-api-key": key };
+  const res = await fetch(url, { method: "POST", headers: { ...headers, ...auth }, body: JSON.stringify(body), signal: AbortSignal.timeout(120_000) });
+  return res.json(); // error bodies are read as "no AI output" by the merge step
+};
 
 let handlersPromise: Promise<HandlerMap> | null = null;
 function handlers(): Promise<HandlerMap> {
@@ -139,19 +153,29 @@ export async function startExecution(
     metadata: { agent: slug, trigger, attempt: execution.attempt },
   });
 
+  const envelope = {
+    execution_id: execution.id,
+    agent: slug,
+    organization_id: ctx.orgId,
+    callback: { url: `${e.APP_BASE_URL.replace(/\/+$/, "")}/api/n8n/callback/${execution.id}`, token },
+    ai: { enabled: e.AI_ENABLED === "true" && (e.ENGINE === "n8n" || Boolean(aiKey())), model: e.AI_MODEL, provider: e.AI_PROVIDER },
+    input: opts.input,
+  };
+
+  if (e.ENGINE === "builtin") {
+    // Same pipeline as the n8n workflow, run in this process after the response
+    // is sent; the result goes through the same callback validation and handlers.
+    setTimeout(() => {
+      runPipeline(envelope, callAi)
+        .then((body) => handleCallback(execution.id, token, body))
+        .catch((err) => failExecution(execution.id, "ENGINE_ERROR", (err as Error).message || "The built-in engine failed."))
+        .catch((err) => logger.error("builtin_engine_failed", { execution_id: execution.id, error: (err as Error).message }));
+    }, 0);
+    return { execution: (await getExecutionForService(execution.id))!, duplicate: false };
+  }
+
   try {
-    const outcome = await invokeWorkflow(
-      slug,
-      {
-        execution_id: execution.id,
-        agent: slug,
-        organization_id: ctx.orgId,
-        callback: { url: `${e.APP_BASE_URL.replace(/\/+$/, "")}/api/n8n/callback/${execution.id}`, token },
-        ai: { enabled: e.AI_ENABLED === "true", model: e.AI_MODEL, provider: e.AI_PROVIDER },
-        input: opts.input,
-      },
-      n8nConfig(),
-    );
+    const outcome = await invokeWorkflow(slug, envelope, n8nConfig());
     if (outcome.kind === "completed") {
       await finalizeExecution(execution.id, {
         status: outcome.status,

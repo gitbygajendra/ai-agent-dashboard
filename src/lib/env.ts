@@ -10,10 +10,12 @@ const schema = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
   APP_BASE_URL: z.url().default("http://localhost:3000"),
 
-  DATABASE_URL: z.string().min(1, "DATABASE_URL is required"),
+  // Unset: an embedded database (PGlite) in .data/db, nothing to install.
+  DATABASE_URL: z.string().min(1).optional(),
   DATABASE_SSL: z.enum(["true", "false"]).default("false"),
 
-  AUTH_MODE: z.enum(["supabase", "local"]).optional(),
+  // "none": no sign-in, one automatic local user (default when DATABASE_URL is unset).
+  AUTH_MODE: z.enum(["supabase", "local", "none"]).optional(),
   NEXT_PUBLIC_SUPABASE_URL: z.url().optional(),
   NEXT_PUBLIC_SUPABASE_ANON_KEY: z.string().optional(),
   SUPABASE_SERVICE_ROLE_KEY: z.string().optional(),
@@ -40,7 +42,11 @@ const schema = z.object({
   N8N_WEBHOOK_URL_CUSTOMER_SUPPORT: z.url().optional(),
   N8N_WEBHOOK_URL_LEAD_GENERATION: z.url().optional(),
 
-  AI_PROVIDER: z.enum(["anthropic", "groq"]).default("anthropic"),
+  // Default: groq when GROQ_API_KEY is set, else anthropic.
+  AI_PROVIDER: z.enum(["anthropic", "groq"]).optional(),
+  // Used by the built-in engine (no n8n). With n8n, the key lives in n8n instead.
+  GROQ_API_KEY: z.string().optional(),
+  ANTHROPIC_API_KEY: z.string().optional(),
   // Defaults per provider: claude-opus-5-5 (anthropic), llama-3.3-70b-versatile (groq).
   AI_MODEL: z.string().optional(),
   AI_ENABLED: z.enum(["true", "false"]).default("true"),
@@ -53,9 +59,16 @@ const schema = z.object({
   MAX_DATASET_ROWS: z.coerce.number().int().positive().default(50000),
 });
 
-export type Env = z.infer<typeof schema> & { AI_MODEL: string };
+type AiProvider = "anthropic" | "groq";
 
-export const DEFAULT_AI_MODEL: Record<Env["AI_PROVIDER"], string> = { anthropic: "claude-opus-5-5", groq: "llama-3.3-70b-versatile" };
+export type Env = Omit<z.infer<typeof schema>, "AI_PROVIDER"> & {
+  AI_PROVIDER: AiProvider;
+  AI_MODEL: string;
+  /** "builtin": agents run inside the app (no n8n configured). */
+  ENGINE: "n8n" | "builtin";
+};
+
+export const DEFAULT_AI_MODEL: Record<AiProvider, string> = { anthropic: "claude-opus-5-5", groq: "llama-3.3-70b-versatile" };
 
 let cached: Env | null = null;
 
@@ -68,9 +81,18 @@ export function env(): Env {
     const issues = parsed.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("; ");
     throw new Error(`Invalid server configuration: ${issues}`);
   }
-  const e = { ...parsed.data, AI_MODEL: parsed.data.AI_MODEL ?? DEFAULT_AI_MODEL[parsed.data.AI_PROVIDER] };
+  const d = parsed.data;
+  const provider: AiProvider = d.AI_PROVIDER ?? (d.GROQ_API_KEY ? "groq" : "anthropic");
+  const n8nConfigured = Boolean(d.N8N_BASE_URL || d.N8N_MASTER_WEBHOOK_URL) || Object.entries(d).some(([k, v]) => k.startsWith("N8N_WEBHOOK_URL_") && v);
+  const e: Env = { ...d, AI_PROVIDER: provider, AI_MODEL: d.AI_MODEL ?? DEFAULT_AI_MODEL[provider], ENGINE: n8nConfigured ? "n8n" : "builtin" };
   if (!e.AUTH_MODE) {
-    e.AUTH_MODE = e.NEXT_PUBLIC_SUPABASE_URL && e.NEXT_PUBLIC_SUPABASE_ANON_KEY ? "supabase" : "local";
+    e.AUTH_MODE = !e.DATABASE_URL ? "none" : e.NEXT_PUBLIC_SUPABASE_URL && e.NEXT_PUBLIC_SUPABASE_ANON_KEY ? "supabase" : "local";
+  }
+  if (e.AUTH_MODE === "none" && e.NODE_ENV === "production" && process.env.ALLOW_LOCAL_AUTH !== "true") {
+    throw new Error("AUTH_MODE=none (no sign-in) is for running on your own computer only. Configure AUTH_MODE=local or supabase for production.");
+  }
+  if (!e.DATABASE_URL && e.AUTH_MODE !== "none") {
+    throw new Error("The embedded database (no DATABASE_URL) only supports AUTH_MODE=none.");
   }
   if (e.AUTH_MODE === "local") {
     if (e.NODE_ENV === "production" && process.env.ALLOW_LOCAL_AUTH !== "true") {

@@ -4,6 +4,26 @@ One workspace with seven AI agents for a small business: data analytics, email, 
 
 Stack: Next.js 16 (App Router, TypeScript) · Tailwind CSS v4 with shadcn/ui-style components · Lucide · Recharts · Supabase Postgres + Auth + Storage · n8n · Anthropic Claude (called from n8n).
 
+## Run it anywhere (no setup)
+
+Needs only Node.js 20+ (Windows, macOS or Linux). No database, no n8n, no accounts, no sign-in:
+
+```bash
+git clone https://github.com/gitbygajendra/ai-agent-dashboard.git
+cd ai-agent-dashboard
+npm install
+npm run dev
+```
+
+Open http://localhost:3000. With no `.env.local` the app runs in **standalone mode**:
+
+- **Database:** PGlite, real Postgres compiled to WebAssembly, runs inside the app. Data lives in `.data/db` (delete that folder to start over). Same schema and row-level security as the full setup.
+- **Agents:** the built-in engine runs each agent's step-by-step pipeline in the app, the same code the n8n workflow runs. Each agent page lists its steps.
+- **No sign-in:** you are the workspace owner. Only for your own computer; the app refuses to start this way in production.
+- **AI text (optional):** create `.env.local` with `GROQ_API_KEY=gsk_...` (free at https://console.groq.com/keys) or `ANTHROPIC_API_KEY=...` and restart. Without a key every agent still works and labels results "AI unavailable".
+
+Sample files are in `public/samples/`. Setting `DATABASE_URL` and/or `N8N_BASE_URL` switches to the full setup below.
+
 ## Agent status
 
 | Agent | Status | Works without extra setup | Needs |
